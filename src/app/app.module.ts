@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './home/home/home.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { PrivacyComponent } from './shared/components/privacy/privacy.component';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +21,9 @@ import { PrivacyComponent } from './shared/components/privacy/privacy.component'
         HomeComponent,
         FooterComponent,
         MainLayoutComponent,
-        PrivacyComponent
+        PrivacyComponent,
+        HomeLayoutComponent,
+        HeaderComponent
     ],
     imports: [
         BrowserAnimationsModule,
