@@ -1,0 +1,159 @@
+.page-header {
+    height: auto;
+    max-height: fit-content;
+    .brand {
+        height: 140px;
+        img {
+            max-width: 140px;
+        }
+    }
+
+    .headerBtn {
+        margin: 60px 0 42px;
+        a {
+            background: linear-gradient( 45deg, #0069e0, #49c7c9);
+        }
+    }
+    
+    .phoneSection {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img {
+            // max-width: none;
+            width: 800px;
+        }
+    }
+}
+
+.title {
+    background: linear-gradient(to right,#1c7caf 0%,#1c7caf 60%,#28beb7 100%)
+}
+
+.main {
+    .voting {
+        position: relative;
+        .rightTopNet {
+            position: absolute;
+            right: -12px;
+            top: 56px;
+            img {
+                width: 30vw;
+            }
+        }
+        .leftBottomNet {
+            position: absolute;
+            left: -12px;
+            bottom: -105px;
+            img {
+                width: 30vw;
+            }
+        }
+        .topArrow {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-top: -40px;
+            background: white;
+        }
+        .cardGroup {
+            margin: 60px 0 200px;
+            .card {
+                max-width: 400px;
+                width: 100%;
+                height: 300px;
+                img {
+                    width: 180px;
+                }
+                img.smallImg {
+                    width: 120px;
+                }
+                .cardBtn {
+                    a {
+                        background: linear-gradient( 45deg, #0069e0, #49c7c9);
+                        padding: 12px 24px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        width: 160px;
+                    }
+                    a.colorGray {
+                        background: #70767f;
+                    }
+                }
+            }
+        }
+    }
+
+    .power {
+        background: linear-gradient( 45deg, #0069e0 0%, #49c7c9);
+        position: relative;
+        .bottomArrow {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-top: -58px;
+            background: white;
+            z-index: 1;
+        }
+        .leftTopImg {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            img {
+                width: 50vw;
+                max-width: 300px;
+            }
+        }
+    }
+
+    .partners {
+        .topArrow {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-top: -40px;
+            background: white;
+        }
+        .bottomImg {
+            float: right;
+        }
+    }
+
+    img.arrowIcon {
+        width: 64px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .page-header {
+        .container {
+            min-height: 100vh;
+        }
+        .brand {
+            height: 30px;
+        }
+        .phoneSection {
+            position: relative;
+            img {
+                height: 460px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .cardGroup {
+        margin: 12px 0 56px !important;
+        .card {
+            height: 240px !important;
+        }
+    }
+    .main {
+        .partners {
+            .bottomImg {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                opacity: .5;
+            }
+        }
+    }
+}

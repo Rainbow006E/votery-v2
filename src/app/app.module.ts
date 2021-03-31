@@ -1,26 +1,34 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainLayoutComponent } from './layouts/index/main-layout.component';
-import { HeaderComponent } from './layouts/header/header.component';
-import { FooterComponent } from './layouts/footer/footer.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { PrivacyComponent } from './shared/components/privacy/privacy.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainLayoutComponent,
-    HeaderComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        HomeComponent,
+        FooterComponent,
+        MainLayoutComponent,
+        PrivacyComponent
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        NgbModule,
+        FormsModule,
+        RouterModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

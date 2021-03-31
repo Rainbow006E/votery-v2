@@ -1,0 +1,37 @@
+.privacy {
+    .round-btn {
+        a {
+            padding: 12px 16px;
+            font-size: 12px;
+            font-weight: bold;
+            width: 150px;
+        }
+    }
+
+    .whiteBtn {
+        a {
+            background: white;
+            color: #737272;
+        }
+    }
+
+    .transBtn {
+        a {
+            background: transparent;
+            border: 1px solid white;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .privacy {
+        .round-btn {
+            a {
+                padding: 12px 12px;
+                font-size: 12px;
+                font-weight: bold;
+                width: 140px;
+            }
+        }
+    }
+}

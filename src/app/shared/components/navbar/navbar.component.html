@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent" color-on-scroll="500">
+  <div class="container">
+
+    <div class="navbar-translate">
+      <a class="navbar-brand" [routerLink]="['/index']" placement="bottom">
+        <img class="n-logo" src="assets/img/header/logo.svg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="sidebarToggle()">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
+      <ul class="navbar-nav ml-auto text-uppercase">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#" target="_blank">
+            <h3 class="m-0"> Home </h3>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            <h3 class="m-0"> About </h3>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            <h3 class="m-0"> Business and sadarbiba </h3>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            <h3 class="m-0"> News </h3>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            <h3 class="m-0 font-weight-bold"> Log In </h3>
+          </a>
+        </li>
+
+        <li class="d-none d-sm-block">
+          <a class="nav-link h-100 p-0" style="border-right: 2px solid #49d7d9;"></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+            <h3 class="m-0 font-weight-bold"> Sign Up </h3>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <div ngbDropdown class="dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" ngbDropdownToggle>
+              <h3 class="m-0">
+                My Profile
+              </h3>
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu">
+              <a class="dropdown-item" href="#"> First Action </a>
+              <a class="dropdown-item" href="#"> Second Action </a>
+              <a class="dropdown-item" href="#"> Third Action </a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
