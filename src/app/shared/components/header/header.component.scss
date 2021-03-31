@@ -5,12 +5,16 @@
     border-left: 0.5em solid transparent;
 }
 
+.dropdown.avatar .dropdown-toggle::after {
+    display:none;
+}
+
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
     .navbar-brand {
         img {
-            height: 38px;
+            height: 35px;
         }
     }
     .navbar-nav li {
@@ -20,6 +24,10 @@
     .navbar-nav li.active {
         border-top: 4px solid #7df8f8;
     }
+}
+
+.navbar a:not(.btn):not(.dropdown-item) {
+    color: black;
 }
 
 @media screen and (max-width: 575px) {
