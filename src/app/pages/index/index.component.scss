@@ -30,14 +30,31 @@
                 color: #f8097a;
             }
         }
+        .phone {
+            position: absolute;
+            top: 64px;
+            right: 100px;
+            z-index: 3;
+            width: 600px;
+            width: 40%;
+        }
     }
 
     .main {
         background: transparent;
+        .application-top-divider {
+            height: 150px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url(/assets/imgs/bgs/white1-1.svg);
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
         .application {
-            // background: url(/assets/imgs/bgs/white1.svg) no-repeat 100%;
-            // background-position: top;
-            // background-size: contain;
             background: white;
             h3 {
                 font-size: 1.715em;
@@ -53,6 +70,18 @@
                 border: 1px solid #222222;
             }
         }
+        .application-bottom-divider {
+            height: 150px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url(/assets/imgs/bgs/white1-2.svg);
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 }
 
@@ -64,6 +93,13 @@
             }
             .brand {
                 height: 30px;
+            }
+            .phone {
+                position: relative;
+                width: 100%;
+                right: 0;
+                top: 0;
+                margin-bottom: 24px;
             }
         }
     }

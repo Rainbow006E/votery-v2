@@ -36,8 +36,6 @@ export class HomeLayoutComponent implements OnInit {
         this.navbar.sidebarClose();
     });
     this.renderer.listen('window', 'scroll', (event) => {
-      console.log('scroll change');
-      
         const number = window.scrollY;
         var _location = this.location.path();
         _location = _location.split('/')[2];

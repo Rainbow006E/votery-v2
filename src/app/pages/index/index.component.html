@@ -5,7 +5,7 @@
             </div>
 
             <div class="row" style="margin-top: 48px;">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-md-8 col-xl-6 my-5">
                     <h1 class="font-weight-bolder text-left">
                         If you are smart - you will <span class="pinkTxt">win cash!</span>
                     </h1>
@@ -15,25 +15,31 @@
                     </h3>
 
                     <div class="headerBtn text-left">
-                        <a [routerLink]="['/']" class="blueBtn btn btn-primary btn-lg text-uppercase font-weight-bolder mr-3"> Choose a game </a>
-                        <a [routerLink]="['/']" class="transBtn btn btn-primary btn-lg text-uppercase font-weight-bolder text-dark"> How it works? </a>
+                        <a [routerLink]="['/']" class="blueBtn btn btn-lg text-uppercase font-weight-bolder d-flex justify-content-center d-md-inline mr-0 mr-md-3">
+                            Choose a game
+                        </a>
+                        <a [routerLink]="['/']" class="transBtn btn btn-lg text-uppercase font-weight-bolder text-dark d-flex justify-content-center d-md-inline">
+                            How it works?
+                        </a>
                     </div>
                 </div>
+            </div>
+
+            <div class="phone">
+                <img src="assets/imgs/mobile.svg">
             </div>
         </div>
     </div>
 
     <div class="main">
-        <div class="top-divider">
-            <img src="assets/imgs/bgs/white1-1.svg" class="w-100">
-        </div>
+        <div class="application-top-divider"></div>
         <div class="application py-5">
             <div class="container mt-5">
-                <h2 class="d-flex align-items-center justify-content-center">
+                <h2 class="text-center">
                     How does it work?
                 </h2>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4">
                         <h3 class="d-flex justify-content-center font-weight-bold mb-3"> Choose </h3>
                         <div class="d-flex justify-content-center">
                             <img src="assets/imgs/orange-subtract.svg">
@@ -42,7 +48,7 @@
                             Check out our games and choose one that fits you the best!
                         </h5>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4">
                         <h3 class="d-flex justify-content-center font-weight-bold mb-3"> Vote </h3>
                         <div class="d-flex justify-content-center">
                             <img src="assets/imgs/orange-subtract.svg">
@@ -51,7 +57,7 @@
                             Buy a ticket and join in to a multiplayer math-based game cash battle!
                         </h5>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-sm-4">
                         <h3 class="d-flex justify-content-center font-weight-bold mb-3"> Win </h3>
                         <div class="d-flex justify-content-center">
                             <img src="assets/imgs/orange-subtract.svg">
@@ -66,8 +72,6 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-divider">
-            <img src="assets/imgs/bgs/white1-2.svg" class="w-100">
-        </div>
+        <div class="application-bottom-divider"></div>
     </div>
 </div>

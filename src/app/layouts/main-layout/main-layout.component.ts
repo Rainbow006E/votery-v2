@@ -37,9 +37,7 @@ export class MainLayoutComponent implements OnInit {
         this.navbar.sidebarClose();
     });
 
-    this.renderer.listen('window', 'scroll', (event) => {
-      console.log('scroll change');
-      
+    this.renderer.listen('window', 'scroll', (event) => {      
         const number = window.scrollY;
         var _location = this.location.path();
         _location = _location.split('/')[2];

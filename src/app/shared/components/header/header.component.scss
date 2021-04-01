@@ -6,7 +6,7 @@
 }
 
 .dropdown.avatar .dropdown-toggle::after {
-    display:none;
+    display: none;
 }
 
 .navbar {
@@ -15,6 +15,11 @@
     .navbar-brand {
         img {
             height: 35px;
+        }
+    }
+    .navbar-toggler {
+        span.navbar-toggler-bar {
+            background: black;
         }
     }
     .navbar-nav li {
@@ -28,6 +33,27 @@
 
 .navbar a:not(.btn):not(.dropdown-item) {
     color: black;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        &::before {
+            background: white;
+        }
+        .navbar-nav {
+            .nav-item {
+                a,
+                h3 {
+                    color: black;
+                }
+                .dropdown {
+                    .dropdown-menu {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 575px) {
