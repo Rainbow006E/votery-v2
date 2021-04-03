@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
@@ -9,6 +9,7 @@ import { Location } from '@angular/common';
 export class HeaderComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
+  @Input() path: string;
 
   constructor(public location: Location, private element : ElementRef) {
       this.sidebarVisible = false;

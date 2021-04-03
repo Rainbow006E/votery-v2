@@ -17,9 +17,10 @@
         <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
             <ul class="navbar-nav ml-auto text-uppercase">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank">
+                <li class="nav-item" [class.active]="path === '/about'">
+                    <a class="nav-link" href="#">
                         <h3 class="m-0 font-weight-bold"> About </h3>
+                        <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
@@ -29,36 +30,114 @@
                             <h3 class="m-0 font-weight-bold">
                                 Applications
                             </h3>
+                            <div class="subtract text-center rounded-circle"></div>
                         </a>
                         <div ngbDropdownMenu class="dropdown-menu">
-                            <a class="dropdown-item" href="#"> First Action </a>
-                            <a class="dropdown-item" href="#"> Second Action </a>
-                            <a class="dropdown-item" href="#"> Third Action </a>
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-4 my-3 white-region">
+                                    <h4 class="text-center mb-0">
+                                        Golden line
+                                    </h4>
+                                    <div class="text-center">
+                                        <img src="assets/imgs/logos/golden-line-logo.svg">
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a [routerLink]="['/']"
+                                            class="blueBtn btn btn-primary btn-lg text-uppercase font-weight-bolder">
+                                            Play
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="col-12 col-md-4 my-3 white-region">
+                                    <h4 class="text-center mb-0">
+                                        Crypto line
+                                    </h4>
+                                    <div class="text-center">
+                                        <img src="assets/imgs/logos/crypto-line-logo.svg">
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a [routerLink]="['/']"
+                                            class="blueBtn btn btn-primary btn-lg text-uppercase font-weight-bolder">
+                                            Play
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="col-12 col-md-4 my-3">
+                                    <h4 class="text-center mb-0">
+                                        Battle line
+                                    </h4>
+                                    <div class="text-center">
+                                        <img src="assets/imgs/logos/battle-line-logo.svg">
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a [routerLink]="['/']"
+                                            class="transBtn btn btn-primary btn-lg text-uppercase font-weight-bolder text-dark">
+                                            Comming soon
+                                        </a>
+                                    </div>
+                                </div>
+            
+                                <div class="col-12 col-md-4 my-3">
+                                    <h4 class="text-center mb-0">
+                                        Crypto Battle
+                                    </h4>
+                                    <div class="text-center">
+                                        <img src="assets/imgs/logos/crypto-battle-logo.svg">
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a [routerLink]="['/']"
+                                            class="transBtn btn btn-primary btn-lg text-uppercase font-weight-bolder text-dark">
+                                            Comming soon
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 my-3">
+                                    <h4 class="text-center mb-0">
+                                        Deblex
+                                    </h4>
+                                    <div class="text-center">
+                                        <img src="assets/imgs/logos/crypto-battle-logo.svg">
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a [routerLink]="['/']"
+                                            class="transBtn btn btn-primary btn-lg text-uppercase font-weight-bolder text-dark">
+                                            Comming soon
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank">
+                <li class="nav-item" [class.active]="path === '/news'">
+                    <a class="nav-link" href="/news">
                         <h3 class="m-0 font-weight-bold"> News </h3>
+                        <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank">
+                <li class="nav-item" [class.active]="path === '/#'">
+                    <a class="nav-link" href="#">
                         <h3 class="m-0 font-weight-bold"> Partnership </h3>
+                        <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank">
+                <li class="nav-item" [class.active]="path === '/#'">
+                    <a class="nav-link" href="#">
                         <h3 class="m-0 font-weight-bold"> Developers </h3>
+                        <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank">
+                <li class="nav-item" [class.active]="path === '/contacts'">
+                    <a class="nav-link" href="/contacts">
                         <h3 class="m-0 font-weight-bold"> Contact us </h3>
+                        <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
@@ -69,7 +148,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank">
+                    <a class="nav-link" href="javascript: void(0)">
                         <img src="assets/imgs/union.svg" alt="">
                     </a>
                 </li>

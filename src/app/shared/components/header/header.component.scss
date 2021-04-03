@@ -22,12 +22,68 @@
             background: black;
         }
     }
-    .navbar-nav li {
-        padding: 16px 0;
-        border-top: 4px solid transparent;
-    }
-    .navbar-nav li.active {
-        border-top: 4px solid #7df8f8;
+    .navbar-nav {
+        li.nav-item {
+            padding: 16px 0;
+            &:hover {
+                .nav-link {
+                    .subtract {
+                        display: block;
+                        border: 1px solid black;
+                    }
+                }
+            }
+            .nav-link {
+                position: relative;
+                .subtract {
+                    display: none;
+                    position: absolute;
+                    bottom: -4px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 7px;
+                    height: 7px;
+                    border: 1px solid none;
+                }
+            }
+            .dropdown {
+                cursor: pointer;
+                .dropdown-menu {
+                    width: 1000px;
+                    transform: translate3d(-50%, 29px, 0);
+                    left: 50% !important;
+                    &::before {
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: -14px;
+                        border-bottom: 1em solid;
+                        border-right: 1em solid transparent;
+                        border-left: 1em solid transparent;
+                    }
+                    a.blueBtn {
+                        background: linear-gradient( 180deg, #1264AD, #48C6C9);
+                        border-radius: 12px;
+                        font-size: 1.143em;
+                    }
+                    a.transBtn {
+                        background: transparent;
+                        border-radius: 12px;
+                        font-size: 1.143em;
+                        border: 1px solid #a0a0a0;
+                        color: #a0a0a0 !important;
+                    }
+                }
+            }
+        }
+        li.nav-item.active {
+            background: linear-gradient( 180deg, #1264AD, #48C6C9);
+            .nav-link {
+                .subtract {
+                    display: block;
+                    border: 1px solid white;
+                }
+            }
+        }
     }
 }
 
