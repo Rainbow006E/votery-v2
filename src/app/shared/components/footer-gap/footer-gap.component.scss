@@ -6,10 +6,18 @@
         position: absolute;
         content: "";
         background-image: url(/assets/imgs/bgs/footer-grey-dark.svg);
-        background-size: cover;
         background-repeat: no-repeat;
         top: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .footer-gap {
+        height: calc(100vw * 150 / 1440) !important;
+        &::before {
+            background-size: cover;
+        }
     }
 }
