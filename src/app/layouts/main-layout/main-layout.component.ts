@@ -34,7 +34,7 @@ export class MainLayoutComponent implements OnInit {
         }else{
             window.document.activeElement.scrollTop = 0;
         }
-        this.navbar.sidebarClose();
+        this.navbar?.sidebarClose();
     });
 
     this.renderer.listen('window', 'scroll', (event) => {      
@@ -42,7 +42,7 @@ export class MainLayoutComponent implements OnInit {
         var _location = this.location.path();
         _location = _location.split('/')[2];
 
-        if (number > 150 || window.pageYOffset > 150) {
+        if (number > 78 || window.pageYOffset > 78) {
             navbar.classList.remove('navbar-transparent');
         } else if (_location !== 'login' && this.location.path() !== '/nucleoicons') {
             // remove logic

@@ -1,0 +1,31 @@
+<div class="news py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>
+                    Company news
+                </h2>
+            </div>
+        </div>
+
+        <div class="row news-row">
+            <div class="col-12 col-md-4" *ngFor="let new of news">
+                <img [src]="new.image" (click)="detail(new)">
+                <h4>
+                    {{ new.title }}
+                </h4>
+                <p>
+                    {{ new.description }}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <a [routerLink]="['/']" class="loadmoreBtn btn text-uppercase font-weight-bolder text-dark">
+                    Load more
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

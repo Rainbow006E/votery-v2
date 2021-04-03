@@ -18,12 +18,8 @@ const routes: Routes =[
         component: MainLayoutComponent,
         children: [
             {
-                path: "index",
-                component: IndexComponent
-            },
-            {
-                path: "terms-conditions",
-                component: TemrsConditionsComponent
+                path: "",
+                loadChildren: './pages/pages.module#PagesModule'
             }
         ]
     },

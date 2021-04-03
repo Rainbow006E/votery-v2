@@ -1,0 +1,22 @@
+.news-article {
+    background-color: #f2f2f2;
+    .coverImage {
+        .coverTitle {
+            margin-top: -145px;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .news-article {
+        .coverImage {
+            .coverTitle {
+                margin: 0;
+                h1 {
+                    color: black !important;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
