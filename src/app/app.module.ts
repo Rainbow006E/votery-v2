@@ -13,6 +13,9 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { PrivacyComponent } from './shared/components/privacy/privacy.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterTopComponent } from './shared/components/footer-top/footer-top.component';
+import { FooterBottomComponent } from './shared/components/footer-bottom/footer-bottom.component';
+import { FooterGapComponent } from './shared/components/footer-gap/footer-gap.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +26,10 @@ import { HeaderComponent } from './shared/components/header/header.component';
         MainLayoutComponent,
         PrivacyComponent,
         HomeLayoutComponent,
-        HeaderComponent
+        HeaderComponent,
+        FooterTopComponent,
+        FooterBottomComponent,
+        FooterGapComponent
     ],
     imports: [
         BrowserAnimationsModule,

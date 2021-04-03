@@ -1,0 +1,15 @@
+.footer-gap {
+    height: 150px;
+    position: relative;
+    background-color: #f2f2f2;
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(/assets/imgs/bgs/footer-grey-dark.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
