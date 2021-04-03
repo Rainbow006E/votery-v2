@@ -6,10 +6,11 @@ import { IndexComponent } from './index/index.component';
 import { TemrsConditionsComponent } from './temrs-conditions/temrs-conditions.component';
 import { NewsComponent } from './news/news.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
-  declarations: [IndexComponent, TemrsConditionsComponent, NewsComponent, NewsArticleComponent],
+  declarations: [IndexComponent, TemrsConditionsComponent, NewsComponent, NewsArticleComponent, ContactsComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
