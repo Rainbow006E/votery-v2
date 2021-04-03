@@ -1,5 +1,19 @@
 .footer-top {
     background-color: #dedede;
+    .footer-top-divider {
+        background-color: #f2f2f2;
+        height: 150px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url(/assets/imgs/bgs/footer-grey-top.svg);
+            background-size: cover;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
     .media-icon {
         border: 1px solid black;
         width: 32px;
