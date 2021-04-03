@@ -57,29 +57,43 @@
                 border: 1px solid #222222;
             }
         }
-        .application-bottom-divider {
+
+        .games-gray-top-divider {
             &::before {
-                background-image: url(/assets/imgs/bgs/white1-2.svg);
-                top: 0;
+                background-image: url(/assets/imgs/bgs/games-gray-top.svg);
+                bottom: 0;
             }
         }
-
         .games {
+            background-color: #e7e7e7;
             position: relative;
-            min-height: calc(100vw * 805 / 1440 + 80px);
-            &::before {
+            .games-pic {
                 position: absolute;
-                content: "";
-                background-image: url(/assets/imgs/bgs/games-section-bg.png);
-                top: -124px;
-                width: 100%;
-                height: 100%;
-                background-repeat: no-repeat;
-                background-position: top;
-                background-size: cover;
+                left: 0;
+                top: -249px;
+                z-index: 5;
             }
-            p {
-                font-size: 1.142em;
+            // position: relative;
+            // min-height: calc(100vw * 805 / 1440 + 80px);
+            // &::before {
+            //     position: absolute;
+            //     content: "";
+            //     background-image: url(/assets/imgs/bgs/games-section-bg.png);
+            //     top: -124px;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-repeat: no-repeat;
+            //     background-position: top;
+            //     background-size: cover;
+            // }
+            // p {
+            //     font-size: 1.142em;
+            // }
+        }
+        .games-gray-bottom-divider {
+            &::before {
+                background-image: url(/assets/imgs/bgs/games-gray-bottom.svg);
+                top: 0;
             }
         }
 
@@ -167,11 +181,6 @@
             height: calc(100vw * 150 / 1440) !important;
         }
     }
-    .games {
-        &::before {
-            background-size: cover;
-        }
-    }
 }
 
 @media screen and (max-width: 575px) {
@@ -189,6 +198,11 @@
                 left: -15px;
                 top: 0;
                 margin-bottom: 24px;
+            }
+        }
+        .games {
+            .games-pic {
+                position: unset !important;
             }
         }
     }
