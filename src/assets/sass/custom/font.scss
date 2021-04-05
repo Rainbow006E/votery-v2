@@ -1,3 +1,4 @@
+/** Raleway Font */
 @font-face {
     font-family: "Raleway";
     src: local("Raleway"), url(../../fonts/raleway/Raleway-ExtraBold.ttf) format("truetype");
@@ -31,6 +32,44 @@
 @font-face {
     font-family: "Raleway";
     src: local("Raleway"), url(../../fonts/raleway/Raleway-Light.ttf) format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+/** FuturaPT Font */
+@font-face {
+    font-family: "FuturaPT";
+    src: local("FuturaPT"), url(../../fonts/FuturaPT/FuturaPTExtraBoldOblique.otf) format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FuturaPT";
+    src: local("FuturaPT"), url(../../fonts/FuturaPT/FuturaPTBoldOblique.otf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FuturaPT";
+    src: local("FuturaPT"), url(../../fonts/FuturaPT/FuturaPTHeavyOblique.otf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FuturaPT";
+    src: local("FuturaPT"), url(../../fonts/FuturaPT/FuturaPTMediumOblique.otf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FuturaPT";
+    src: local("FuturaPT"), url(../../fonts/FuturaPT/FuturaPTMediumOblique.otf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FuturaPT";
+    src: local("FuturaPT"), url(../../fonts/FuturaPT/FuturaPTLightOblique.otf) format("truetype");
     font-weight: lighter;
     font-style: normal;
 }

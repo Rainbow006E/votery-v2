@@ -82,7 +82,8 @@
 .has-success,
 .has-danger{
     &:after{
-        font-family: 'Nucleo Outline';
+        // font-family: 'Nucleo Outline';
+        font-family: 'FuturaPT';
         content: "\ea22";
         display: inline-block;
         position: absolute;
