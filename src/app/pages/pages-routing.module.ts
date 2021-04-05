@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MainLayoutComponent } from 'app/layouts/main-layout/main-layout.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { IndexComponent } from './index/index.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
@@ -8,24 +9,30 @@ import { TemrsConditionsComponent } from './temrs-conditions/temrs-conditions.co
 
 const routes: Routes = [
   {
-    path: "index",
-    component: IndexComponent
-  },
-  {
-    path: "terms-conditions",
-    component: TemrsConditionsComponent
-  },
-  {
-    path: "news",
-    component: NewsComponent
-  },
-  {
-    path: "news-article",
-    component: NewsArticleComponent
-  },
-  {
-    path: "contacts",
-    component: ContactsComponent
+    path: "",
+    component: MainLayoutComponent,
+    children: [
+      {
+        path: "index",
+        component: IndexComponent
+      },
+      {
+        path: "terms-conditions",
+        component: TemrsConditionsComponent
+      },
+      {
+        path: "news",
+        component: NewsComponent
+      },
+      {
+        path: "news-article",
+        component: NewsArticleComponent
+      },
+      {
+        path: "contacts",
+        component: ContactsComponent
+      }
+    ]
   }
 ];
 

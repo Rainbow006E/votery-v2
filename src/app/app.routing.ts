@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
-import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
-import { IndexComponent } from './pages/index/index.component';
-import { TemrsConditionsComponent } from './pages/temrs-conditions/temrs-conditions.component';
 
 const routes: Routes =[
     {
@@ -15,13 +12,7 @@ const routes: Routes =[
     },
     {
         path: "",
-        component: MainLayoutComponent,
-        children: [
-            {
-                path: "",
-                loadChildren: './pages/pages.module#PagesModule'
-            }
-        ]
+        loadChildren: './pages/pages.module#PagesModule'
     },
     {
         path: "",
