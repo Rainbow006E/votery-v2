@@ -16,6 +16,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterTopComponent } from './shared/components/footer-top/footer-top.component';
 import { FooterBottomComponent } from './shared/components/footer-bottom/footer-bottom.component';
 import { FooterGapComponent } from './shared/components/footer-gap/footer-gap.component';
+import { AuthenticatedLayoutComponent } from './layouts/authenticated-layout/authenticated-layout.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { FooterGapComponent } from './shared/components/footer-gap/footer-gap.co
         HeaderComponent,
         FooterTopComponent,
         FooterBottomComponent,
-        FooterGapComponent
+        FooterGapComponent,
+        AuthenticatedLayoutComponent
     ],
     imports: [
         BrowserAnimationsModule,

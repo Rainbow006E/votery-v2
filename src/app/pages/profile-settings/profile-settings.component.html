@@ -1,0 +1,133 @@
+<div class="profile-settings py-5">
+    <div class="container py-5">
+        <div class="row path">
+            <div class="col-12">
+                <p class="d-flex align-items-center mb-1">
+                    <span>Home</span>
+                    <span></span>
+                    <i class="far fa-circle d-flex px-2"></i>
+                    <span>My Profile</span>
+                    <i class="far fa-circle d-flex px-2"></i>
+                    <span>Profile Settings</span>
+                </p>
+                <h3 class="m-0 font-weight-bold">
+                    Profile settings
+                </h3>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
+                <div class="user-avatar rounded-circle d-flex align-items-center justify-content-center" [class.border-circle]="!avatar" (click)="clickAvatar()">
+                    <input type="file" accept="image/*" (change)="uploadAvatar($event)" class="avatar-input" hidden #avatarInput>
+                    <div *ngIf="avatar; else inputfile" class="d-flex align-items-center justify-content-center w-100 h-100">
+                        <img [src]="avatar" class="avatar">
+                    </div>
+                    <ng-template #inputfile>
+                        <div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="assets/imgs/icons/avatar.svg">
+                            </div>
+                            <p class="m-0">
+                                Upload profile photo
+                            </p>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="col-12 col-md-9">
+                <form [formGroup]="profileForm" class="mt-4 mt-md-0">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <h5 class="font-weight-bold">
+                                Profile data
+                            </h5>
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="firstName" placeholder="First name">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="lastName" placeholder="Last name">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="phone" placeholder="Phone">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="email" placeholder="E-mail">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="passportNumber" placeholder="Passport number">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <select class="form-control" formControlName="country" [class.disable-text]="!value('country')" placeholder="Country">
+                                <option class="py-5" value="" disabled selected> Country </option>
+                                <option class="py-5"> United Statues </option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="customCheckBox">
+                                Enable two factor authentication
+                                <input type="checkbox" formControlName="twofa">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row mt-5" formGroupName="birthDate">
+                        <div class="col-12">
+                            <h5>
+                                Date of birth
+                            </h5>
+                        </div>
+                        <div class="col-12">
+                            <!-- <input type="number" class="form-control" formControlName="date" placeholder="DD">
+                            <input type="number" class="form-control" formControlName="month" placeholder="MM">
+                            <input type="number" class="form-control" formControlName="year" placeholder="YYYY"> -->
+                        </div>
+                    </div>
+
+                    <div class="form-row mt-5" formGroupName="bankAccount">
+                        <div class="col-12">
+                            <h5 class="font-weight-bold">
+                                Bank account
+                            </h5>
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="bankName" placeholder="Bank name">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="IBAN" placeholder="IBAN">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="SWIFT" placeholder="Bank name">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <input type="text" class="form-control" formControlName="ewallet" placeholder="E-wallet">
+                        </div>
+                    </div>
+
+                    <div class="form-row mt-5">
+                        <div class="col-12 col-md-6 d-block d-md-flex">
+                            <div class="d-flex justify-content-center d-md-block">
+                                <a class="blueBtn btn btn-primary text-uppercase font-weight-bolder mr-3">
+                                    Save profile
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-center d-md-block">
+                                <a class="transBtn btn btn-primary text-uppercase font-weight-bolder text-dark">
+                                    Discard changes
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                            <a class="iconBtn btn btn-primary font-weight-bolder text-dark">
+                                <i class="far fa-trash-alt"></i>
+                                Delete profile
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

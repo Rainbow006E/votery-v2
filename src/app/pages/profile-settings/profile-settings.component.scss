@@ -1,0 +1,135 @@
+.profile-settings {
+    background-color: #f2f2f2;
+    .path {
+        i {
+            font-size: 6px;
+        }
+    }
+    .user-avatar {
+        width: 202px;
+        height: 202px;
+        cursor: pointer;
+        border: 9px solid transparent;
+
+        img.avatar {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .user-avatar.border-circle {
+        border: 9px solid white;
+    }
+    form {
+        input[type=text], input[type=number] {
+            border-radius: 6px;
+            height: 42px;
+            font-size: 1em;
+            border: 0;
+            box-shadow: 3px 2px 12px 2px #b0b0b0;
+            background-color: white;
+        }
+        select {
+            border-radius: 6px;
+            height: 42px;
+            font-size: 1em;
+            border: 0;
+            box-shadow: 3px 2px 12px 2px #b0b0b0;
+            background-color: white;
+            option {
+                font-size: 1.143em;
+                color: black;
+            }
+            option[disabled] {
+                color: gray;
+            }
+        }
+        select.disable-text {
+            color: gainsboro;
+        }
+        /* Customize the label (the customCheckBox) */
+        label.customCheckBox {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 1.143em;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: fit-content;
+            /* On mouse-over, add a grey background color */
+            &:hover {
+                input ~ .checkmark {
+                    background-color: white;
+                }
+            }
+            /* Hide the browser's default checkbox */
+            input[type="checkbox"]{
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                /* When the checkbox is checked, add a blue background */
+                &:checked {
+                    ~ .checkmark {
+                        background: linear-gradient( 180deg, #1264AD, #48C6C9);
+                        border: 0;
+                        /* Show the checkmark when checked */
+                        &::after {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: white;
+                border-radius: 6px;
+                border: 1px solid gray;
+                /* Create the checkmark/indicator (hidden when not checked) */
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 9px;
+                    top: 5px;
+                    width: 9px;
+                    height: 13px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        a.blueBtn {
+            background: linear-gradient( 180deg, #1264AD, #48C6C9);
+            border-radius: 6px;
+            font-size: 1.143em;
+        }
+        a.transBtn {
+            background: transparent;
+            border-radius: 6px;
+            font-size: 1.143em;
+            border: 1px solid #222222;
+        }
+        a.iconBtn {
+            background-color: transparent;
+            border: 0;
+            font-size: 1.143em;
+            &:hover {
+                box-shadow: none;
+                opacity: .8;
+            }
+        }
+    }
+}
