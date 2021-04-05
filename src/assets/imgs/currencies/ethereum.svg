@@ -1,0 +1,13 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<circle cx="12.5083" cy="12" r="11.5" stroke="#131313"/>
+</g>
+<g opacity="0.3">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.5083 12.3785L12.5074 14.1935V19L8.5083 12.3785Z" fill="#131313"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5074 14.1935L8.5083 12.3785L12.5074 10.0205V14.1935Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5076 14.1935L16.5051 12.3785L12.5076 19V14.1935Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5074 9.26497L8.5083 11.6226L12.5074 6.00037V9.26497Z" fill="#131313"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5076 9.26461V6L16.5084 11.6222L12.5076 9.26461Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5076 14.1935V10.0205L16.5051 12.3785L12.5076 14.1935Z" fill="#131313"/>
+</g>
+</svg>
