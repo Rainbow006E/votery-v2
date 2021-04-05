@@ -20,7 +20,7 @@
         border: 9px solid white;
     }
     form {
-        input[type=text], input[type=number] {
+        input {
             border-radius: 6px;
             height: 42px;
             font-size: 1em;
@@ -28,6 +28,12 @@
             box-shadow: 3px 2px 12px 2px #b0b0b0;
             background-color: white;
         }
+        // input.invalid {
+        //     border: 1px solid #fe7777;
+        // }
+        // input.valid {
+        //     border: 1px solid green;
+        // }
         select {
             border-radius: 6px;
             height: 42px;
@@ -110,6 +116,15 @@
                     transform: rotate(45deg);
                 }
             }
+        }
+        input.date {
+            width: 10%;
+        }
+        input.month {
+            width: 10%;
+        }
+        input.year {
+            width: 15%;
         }
         a.blueBtn {
             background: linear-gradient( 180deg, #1264AD, #48C6C9);

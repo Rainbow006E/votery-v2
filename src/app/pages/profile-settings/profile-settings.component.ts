@@ -18,17 +18,19 @@ export class ProfileSettingsComponent implements OnInit {
     country: new FormControl('', Validators.required),
     twofa: new FormControl(true, Validators.required),
     birthDate: new FormGroup({
-      date: new FormControl(''),
+      date: new FormControl('', [Validators.max(31), Validators.min(1)]),
       month: new FormControl(''),
       year: new FormControl('')
     }),
-    bankAccount: new FormGroup({
+    // bankAccount: new FormGroup({
       bankName: new FormControl(''),
       IBAN: new FormControl(''),
       SWIFT: new FormControl(''),
       ewallet: new FormControl(''),
-    })
+    // })
   });
+  formSubmitted: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,6 +39,10 @@ export class ProfileSettingsComponent implements OnInit {
   get lf() {
     return this.profileForm.controls;
   }
+
+  // get bank() {
+  //   // return this.lf.bankAccount;
+  // }
 
   value(value: string) {
     return this.lf[value].value;
@@ -55,5 +61,11 @@ export class ProfileSettingsComponent implements OnInit {
       };
       reader.readAsDataURL(avatar);
     }
+  }
+
+  submit() {
+    this.formSubmitted = true;
+    console.log('submit');
+    
   }
 }
