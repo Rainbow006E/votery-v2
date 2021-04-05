@@ -24,7 +24,6 @@
     }
     .navbar-nav {
         li.nav-item {
-            padding: 16px 0;
             &:hover {
                 .nav-link {
                     .subtract {
@@ -50,6 +49,7 @@
                 cursor: pointer;
                 .dropdown-menu {
                     width: 1000px;
+                    max-width: calc(100vw - 32px);
                     transform: translate3d(-50%, 29px, 0);
                     left: 50% !important;
                     &::before {
@@ -105,6 +105,24 @@
                 .dropdown {
                     .dropdown-menu {
                         height: auto;
+                    }
+                }
+                &:hover {
+                    .nav-link {
+                        .subtract {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar {
+        .navbar-nav {
+            .nav-item.active {
+                .nav-link {
+                    .subtract {
+                        display: none !important;
                     }
                 }
             }

@@ -17,14 +17,14 @@
         <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
             <ul class="navbar-nav ml-auto text-uppercase">
 
-                <li class="nav-item" [class.active]="path === '/about'">
+                <li class="nav-item py-1 py-md-3" [class.active]="path === '/about'">
                     <a class="nav-link" href="#">
                         <h3 class="m-0 font-weight-bold"> About </h3>
                         <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item py-1 py-md-3">
                     <div ngbDropdown class="dropdown">
                         <a class="nav-link dropdown-toggle d-flex align-items-center" ngbDropdownToggle>
                             <h3 class="m-0 font-weight-bold">
@@ -33,7 +33,7 @@
                             <div class="subtract text-center rounded-circle"></div>
                         </a>
                         <div ngbDropdownMenu class="dropdown-menu">
-                            <div class="row mb-3">
+                            <div class="row mb-3 d-none d-md-flex">
                                 <div class="col-12 col-md-4 my-3 white-region">
                                     <h4 class="text-center mb-0">
                                         Golden line
@@ -113,47 +113,47 @@
                     </div>
                 </li>
                 
-                <li class="nav-item" [class.active]="path === '/news'">
+                <li class="nav-item py-1 py-md-3" [class.active]="path === '/news'">
                     <a class="nav-link" href="/news">
                         <h3 class="m-0 font-weight-bold"> News </h3>
                         <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item" [class.active]="path === '/#'">
+                <li class="nav-item py-1 py-md-3" [class.active]="path === '/#'">
                     <a class="nav-link" href="#">
                         <h3 class="m-0 font-weight-bold"> Partnership </h3>
                         <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item" [class.active]="path === '/#'">
+                <li class="nav-item py-1 py-md-3" [class.active]="path === '/#'">
                     <a class="nav-link" href="#">
                         <h3 class="m-0 font-weight-bold"> Developers </h3>
                         <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item" [class.active]="path === '/contacts'">
+                <li class="nav-item py-1 py-md-3" [class.active]="path === '/contacts'">
                     <a class="nav-link" href="/contacts">
                         <h3 class="m-0 font-weight-bold"> Contact us </h3>
                         <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>
 
-                <li class="nav-item d-flex align-items-center">
+                <li class="nav-item py-1 py-md-3 d-flex align-items-center">
                     <a class="nav-link" href="javascript: void(0)">
                         <img src="assets/imgs/subtract.svg" alt="">
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item py-1 py-md-3">
                     <a class="nav-link" href="javascript: void(0)">
                         <img src="assets/imgs/union.svg" alt="">
                     </a>
                 </li>
 
-                <!-- <li class="nav-item">
+                <!-- <li class="nav-item py-1 py-md-3">
                     <div ngbDropdown class="dropdown avatar">
                         <a class="nav-link dropdown-toggle d-flex align-items-center" ngbDropdownToggle>
                             <img src="assets/imgs/union.svg" alt="">
