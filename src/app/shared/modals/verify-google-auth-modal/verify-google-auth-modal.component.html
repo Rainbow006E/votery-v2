@@ -1,0 +1,22 @@
+<div class="modal-container my-4 my-md-0">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> </h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body p-0">
+        <div class="row m-0">
+            <div class="col-12 p-3 py-4 p-md-5">
+                <h3 class="m-0">
+                    Verify Google Authenticator
+                </h3>
+                <p>
+                    Enter a code from Google Authenticator to make sure everything works
+                </p>
+
+                <input type="text" class="form-control" (focus)="enterCode()" placeholder="Enter 6-digit code">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="modal-container my-4 my-md-0">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> </h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body p-0">
+        <div class="row m-0">
+            <div class="col-12 p-3 p-md-5">
+                <h3 class="m-0 mb-3">
+                    Backup verification codes
+                </h3>
+                <p>
+                    Two-factor authentication is tied with your registered device. If you ever change the device, you
+                    will need these verification codes. Please keep them somewhere safe.
+                </p>
+
+                <div class="row d-flex align-items-center justify-content-start">
+                    <div class="col-6 col-md-4 my-1 mr-0 mr-md-1 px-1" *ngFor="let code of codes">
+                        <div class="code">
+                            {{ code }}
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        These codes were generated on 12.12.2020. ) have been used, 10 are stil lavailable.
+                        <a class="generate" (click)="generateNewCode()">Generate new codes.</a>
+                    </p>
+                </div>
+
+                <a class="transBtn btn btn-primary btn-sm  text-uppercase" (click)="download()">
+                    Download(PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,6 +23,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ForgotModalComponent } from './shared/modals/forgot-modal/forgot-modal.component';
 import { EmailSentModalComponent } from './shared/modals/email-sent-modal/email-sent-modal.component';
 import { TermsConditionsModalComponent } from './shared/modals/terms-conditions-modal/terms-conditions-modal.component';
+import { TwofaRegistrationModalComponent } from './shared/modals/twofa-registration-modal/twofa-registration-modal.component';
+import { VerifyGoogleAuthModalComponent } from './shared/modals/verify-google-auth-modal/verify-google-auth-modal.component';
+import { BackupCodeModalComponent } from './shared/modals/backup-code-modal/backup-code-modal.component';
+import { TwofaDoneModalComponent } from './shared/modals/twofa-done-modal/twofa-done-modal.component';
+import { TurnOffModalComponent } from './shared/modals/turn-off-modal/turn-off-modal.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +47,12 @@ import { TermsConditionsModalComponent } from './shared/modals/terms-conditions-
         AuthModalComponent,
         ForgotModalComponent,
         EmailSentModalComponent,
-        TermsConditionsModalComponent
+        TermsConditionsModalComponent,
+        TwofaRegistrationModalComponent,
+        VerifyGoogleAuthModalComponent,
+        BackupCodeModalComponent,
+        TwofaDoneModalComponent,
+        TurnOffModalComponent
     ],
     imports: [
         BrowserAnimationsModule,

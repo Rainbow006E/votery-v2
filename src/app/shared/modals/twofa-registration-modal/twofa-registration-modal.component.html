@@ -1,0 +1,37 @@
+<div class="twofa-registration">
+    <div class="modal-container py-5">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-title"> </h4>
+            <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body p-0 mx-3 mx-md-5">
+            <div class="row m-0">
+                <div class="col-12">
+                    <h3 class="m-0 mb-1">
+                        Enable two factor authentication
+                    </h3>
+                    <p>
+                        Use the Google Authentication application to scan QR code or copy/paste the security key in it.
+                    </p>
+    
+                    <div>
+                        <img src="assets/imgs/qr.png">
+                    </div>
+    
+                    <p>
+                        or enter the following code manually in the Google Authentication app:
+                    </p>
+    
+                    <div class="d-block d-md-flex align-items-center justify-content-start">
+                        <input type="text" class="form-control mr-2" value="UUS7 LEQQ PU6D W7YC" readonly>
+                        <a class="transBtn btn btn-primary text-uppercase" (click)="copyCode()">
+                            Copy code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

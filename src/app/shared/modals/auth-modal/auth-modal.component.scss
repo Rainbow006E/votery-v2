@@ -1,9 +1,5 @@
 .modal-container {
-    width: 880px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     .modal-header {
         height: 0;
         padding: 0;
@@ -116,9 +112,7 @@
 
 @media screen and (max-width: 928px) {
     .modal-container {
-        width: 100%;
-        position: inherit;
-        transform: none;
+        width: calc(100% - 18px);
         .modal-header {
             button.close {
                 width: 32px;

@@ -1,6 +1,7 @@
 .modal-container {
     background-color: white;
-    max-height: calc(100vh - 96px);
+    width: 380px;
+    max-width: 380px;
     border-radius: 12px;
     position: relative;
     .modal-header {
@@ -22,32 +23,29 @@
         }
     }
     .modal-body {
-        max-height: calc(100vh - 192px);
-        overflow-y: auto;
-        &::-webkit-scrollbar {
-            width: 12px;
+        a.blueBtn {
+            background: linear-gradient( 180deg, #1264AD, #48C6C9);
+            border-radius: 6px;
+            font-size: 1.143em;
+            
         }
-        &::-webkit-scrollbar-track {
-            background: #f5f5f5;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: orange;
-            border-radius: 20px;
-            border: 3px solid #f5f5f5;
+        a.resend {
+            color: #1264ad;
+            cursor: pointer;
         }
     }
 }
 
-@media screen and (max-width: 928px) {
+@media screen and (max-width: 575px) {
     .modal-container {
-        width: calc(100% - 18px);
+        width: 100%;
         .modal-header {
             button.close {
                 width: 32px;
                 height: 32px;
                 position: relative;
                 font-size: 32px;
-                top: -22px;
+                top: 24px;
                 right: 24px;
                 color: black;
                 border: 2px solid black;

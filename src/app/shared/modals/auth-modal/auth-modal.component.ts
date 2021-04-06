@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TwofaRegistrationModalComponent } from 'app/shared/modals/twofa-registration-modal/twofa-registration-modal.component';
 import { ForgotModalComponent } from '../forgot-modal/forgot-modal.component';
 import { TermsConditionsModalComponent } from '../terms-conditions-modal/terms-conditions-modal.component';
+import { TurnOffModalComponent } from '../turn-off-modal/turn-off-modal.component';
 
 @Component({
   selector: 'app-auth-modal',
@@ -79,5 +81,26 @@ export class AuthModalComponent implements OnInit {
     }).catch((error) => {
       console.log(error);
     });
+  }
+
+  register() {
+    const twofaResgistrationModalRef = this.ngbModal.open(TwofaRegistrationModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-medium' });
+    twofaResgistrationModalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  changeTwofa(e) {
+    const checked = e.target.checked;
+    if (!checked) {
+      const turnOffModalRef = this.ngbModal.open(TurnOffModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-normal' });
+      turnOffModalRef.result.then((result) => {
+        console.log(result);
+      }).catch((error) => {
+        console.log(error);
+      });
+    }
   }
 }

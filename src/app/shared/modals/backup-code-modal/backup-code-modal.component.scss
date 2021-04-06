@@ -1,6 +1,5 @@
 .modal-container {
-    background-color: white;
-    max-height: calc(100vh - 96px);
+    background-color: #F4F4F4;
     border-radius: 12px;
     position: relative;
     .modal-header {
@@ -22,23 +21,29 @@
         }
     }
     .modal-body {
-        max-height: calc(100vh - 192px);
-        overflow-y: auto;
-        &::-webkit-scrollbar {
-            width: 12px;
+        .code {
+            font-size: 1.214em;
+            background-color: white;
+            border-radius: 6px;
+            border: 0;
+            padding: 4px 12px;
+            text-align: center;
         }
-        &::-webkit-scrollbar-track {
-            background: #f5f5f5;
+        a.generate {
+            color: #2e76b6;
+            cursor: pointer;
         }
-        &::-webkit-scrollbar-thumb {
-            background-color: orange;
-            border-radius: 20px;
-            border: 3px solid #f5f5f5;
+        a.transBtn {
+            background: transparent;
+            border-radius: 6px;
+            font-size: 1.143em;
+            border: 1px solid #1264AD;
+            color: #1264AD;
         }
     }
 }
 
-@media screen and (max-width: 928px) {
+@media screen and (max-width: 575px) {
     .modal-container {
         width: calc(100% - 18px);
         .modal-header {
@@ -47,7 +52,7 @@
                 height: 32px;
                 position: relative;
                 font-size: 32px;
-                top: -22px;
+                top: 24px;
                 right: 24px;
                 color: black;
                 border: 2px solid black;

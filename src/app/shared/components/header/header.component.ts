@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        this.openAuthModal();
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;

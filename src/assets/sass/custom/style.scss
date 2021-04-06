@@ -1,16 +1,41 @@
+// scroll setting when open modal
 .modal-open {
-    overflow: auto;
     padding-right: 0 !important;
+    position: fixed;
+    overflow-y:scroll
 }
 
+// modal overlay opacity set
 .modal-backdrop.show {
     opacity: 1;
 }
 
+// modal overlay background color set
 .modal {
     .modal-dialog {
         .modal-content {
             background-color: transparent;
         }
+    }
+}
+
+// modal large width
+.modal-lg {
+    max-width: 880px;
+    width: 100%;
+}
+
+// modal custom width
+.modal-custom-medium {
+    .modal-dialog {
+        max-width: 653px;
+        width: 100%;
+    }
+}
+
+.modal-custom-normal {
+    .modal-dialog {
+        max-width: 455px;
+        width: 100%;
     }
 }

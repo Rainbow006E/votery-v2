@@ -1,0 +1,25 @@
+<div class="modal-container my-4 my-md-0">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> </h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body p-0">
+        <div class="row m-0">
+            <div class="col-12 p-3 p-md-5">
+                <h3 class="m-0 mb-3">
+                    Done!
+                </h3>
+                <p>
+                    Your two factor authentication is enabled. <br>
+                    You can always turn it off in your profile settings page.
+                </p>
+
+                <a class="blueBtn btn btn-primary text-uppercase" (click)="activeModal.close(false)">
+                    Ok!
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
