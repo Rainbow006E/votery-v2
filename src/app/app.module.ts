@@ -1,7 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 
@@ -18,6 +18,9 @@ import { FooterBottomComponent } from './shared/components/footer-bottom/footer-
 import { FooterGapComponent } from './shared/components/footer-gap/footer-gap.component';
 import { AuthenticatedLayoutComponent } from './layouts/authenticated-layout/authenticated-layout.component';
 import { Header2Component } from './shared/components/header2/header2.component';
+import { AuthModalComponent } from './shared/modals/auth-modal/auth-modal.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { ForgotComponent } from './shared/modals/forgot/forgot.component';
 
 @NgModule({
     declarations: [
@@ -33,16 +36,25 @@ import { Header2Component } from './shared/components/header2/header2.component'
         FooterBottomComponent,
         FooterGapComponent,
         AuthenticatedLayoutComponent,
-        Header2Component
+        Header2Component,
+        AuthModalComponent,
+        ForgotComponent
     ],
     imports: [
         BrowserAnimationsModule,
         NgbModule,
+        BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         RouterModule,
         AppRoutingModule
     ],
-    providers: [],
-    bootstrap: [AppComponent]
+    providers: [
+        NgbActiveModal
+    ],
+    bootstrap: [AppComponent],
+    entryComponents: [
+        AuthModalComponent
+    ]
 })
 export class AppModule { }

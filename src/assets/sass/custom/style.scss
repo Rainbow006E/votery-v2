@@ -1,0 +1,16 @@
+.modal-open {
+    overflow: auto;
+    padding-right: 0 !important;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            background-color: transparent;
+        }
+    }
+}

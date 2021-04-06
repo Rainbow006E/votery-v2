@@ -1,0 +1,144 @@
+.modal-container {
+    width: 880px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .modal-header {
+        height: 0;
+        padding: 0;
+        button.close {
+            position: absolute;
+            right: -18px;
+            top: -24px;
+            z-index: 3;
+            color: white;
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .modal-body {
+        padding: 0;
+        .login {
+            background-color: #f4f4f4;
+            border-radius: 12px;
+            a.forgot {
+                color: #1264AD;
+                cursor: pointer;
+            }
+            a.blueBtn {
+                background: linear-gradient( 180deg, #1264AD, #48C6C9);
+                border-radius: 6px;
+                font-size: 1.143em;
+            }
+        }
+        .register {
+            background-color: #131313;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            input.custom, .input-group {
+                box-shadow: none;
+            }
+            a.registerBtn {
+                background: linear-gradient( 180deg, #E30E00, #FF8A00);
+                border-radius: 6px;
+                font-size: 1.143em;
+            }
+            .agree, .twofa {
+                input[type=checkbox] {
+                    width: 20px;
+                    height: 20px;
+                }
+                a {
+                    color: #124f87;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        form {
+            input.custom {
+                border-radius: 6px;
+                height: 42px;
+                font-size: 1em;
+                border: 0;
+                box-shadow: 3px 2px 12px 2px #b0b0b0;
+                background-color: white;
+            }
+    
+            input[type=password] {
+                font-family: Raleway;
+            }
+    
+            .input-group {
+                border-radius: 6px;
+                box-shadow: 3px 2px 12px 2px #b0b0b0;
+                height: 42px;
+                font-size: 1em;
+                border: 0;
+                background-color: white;
+                input {
+                    border: none;
+                    background: transparent;
+                    background: none;
+                    border-radius: inherit;
+                }
+                .input-group-addon {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    i {
+                        color: gray;
+                    }
+                }
+            }
+            .social-icon {
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid #a6a6a6;
+                padding: 12px 13px 14px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 928px) {
+    .modal-container {
+        width: 100%;
+        position: inherit;
+        transform: none;
+        .modal-header {
+            button.close {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                font-size: 32px;
+                top: 24px;
+                right: 24px;
+                color: black;
+                border: 2px solid black;
+            }
+        }
+        .modal-body {
+            .register {
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+}
