@@ -63,9 +63,9 @@ export class HeaderComponent implements OnInit {
     }
 
     openAuthModal() {
-        const modal = this.ngbModal.open(AuthModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
+        const authModal = this.ngbModal.open(AuthModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
 
-        modal.result.then((result) => {
+        authModal.result.then((result) => {
           console.log(result);
         }).catch((error) => {
           console.log(error);

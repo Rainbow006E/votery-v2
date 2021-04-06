@@ -1,0 +1,55 @@
+.modal-container {
+    background-color: white;
+    width: 380px;
+    max-width: 380px;
+    border-radius: 12px;
+    position: relative;
+    .modal-header {
+        height: 0;
+        padding: 0;
+        button.close {
+            position: absolute;
+            right: -18px;
+            top: -24px;
+            z-index: 3;
+            color: white;
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .modal-body {
+        a.transBtn {
+            background: transparent;
+            border-radius: 6px;
+            font-size: 1.143em;
+            border: 1px solid #222222;
+        }
+        a.resend {
+            color: #1264ad;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal-container {
+        width: 100%;
+        .modal-header {
+            button.close {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                font-size: 32px;
+                top: 24px;
+                right: 24px;
+                color: black;
+                border: 2px solid black;
+            }
+        }
+    }
+}

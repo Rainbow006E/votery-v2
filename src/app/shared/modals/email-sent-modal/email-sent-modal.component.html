@@ -1,0 +1,30 @@
+<div class="modal-container my-4 my-md-0">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> </h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body p-0">
+        <div class="row m-0">
+            <div class="col-12 p-3 p-md-5">
+                <h3 *ngIf="!another; else anotherEmail" class="m-0 mb-3">
+                    E-mail is sent!
+                </h3>
+                <ng-template #anotherEmail>
+                    <h3 class="m-0 mb-3">
+                        Another e-mail is sent!
+                    </h3>
+                </ng-template>
+                <p>
+                    Check your inbox and follow the password reset instructions in the email.
+                    If you have not received email, check the Spam folder or <a class="resend" (click)="sendAnother()">resend it</a>.
+                </p>
+
+                <a class="transBtn btn btn-primary text-uppercase text-dark" (click)="closeModal()">
+                    Close window
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

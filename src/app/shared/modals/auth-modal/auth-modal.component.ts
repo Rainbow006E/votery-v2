@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ForgotModalComponent } from '../forgot-modal/forgot-modal.component';
+import { TermsConditionsModalComponent } from '../terms-conditions-modal/terms-conditions-modal.component';
 
 @Component({
   selector: 'app-auth-modal',
@@ -26,7 +28,8 @@ export class AuthModalComponent implements OnInit {
 
   constructor(
     public activeModal: NgbActiveModal,
-    private router: Router
+    private router: Router,
+    private ngbModal: NgbModal
   ) { }
 
   ngOnInit(): void {
@@ -54,10 +57,27 @@ export class AuthModalComponent implements OnInit {
 
   termsPricacy(e) {
     e.preventDefault();
+    const termsConditionsModalRef = this.ngbModal.open(TermsConditionsModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
+    termsConditionsModalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   login() {
     this.activeModal.close();
     this.router.navigateByUrl('/profile-settings');
+  }
+
+  forgot() {
+    this.activeModal.close();
+    const forgotModalRef = this.ngbModal.open(ForgotModalComponent, { backdrop: 'static', centered: true, size: 'sm' });
+
+    forgotModalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 }

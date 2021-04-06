@@ -20,7 +20,9 @@ import { AuthenticatedLayoutComponent } from './layouts/authenticated-layout/aut
 import { Header2Component } from './shared/components/header2/header2.component';
 import { AuthModalComponent } from './shared/modals/auth-modal/auth-modal.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { ForgotComponent } from './shared/modals/forgot/forgot.component';
+import { ForgotModalComponent } from './shared/modals/forgot-modal/forgot-modal.component';
+import { EmailSentModalComponent } from './shared/modals/email-sent-modal/email-sent-modal.component';
+import { TermsConditionsModalComponent } from './shared/modals/terms-conditions-modal/terms-conditions-modal.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +40,9 @@ import { ForgotComponent } from './shared/modals/forgot/forgot.component';
         AuthenticatedLayoutComponent,
         Header2Component,
         AuthModalComponent,
-        ForgotComponent
+        ForgotModalComponent,
+        EmailSentModalComponent,
+        TermsConditionsModalComponent
     ],
     imports: [
         BrowserAnimationsModule,
