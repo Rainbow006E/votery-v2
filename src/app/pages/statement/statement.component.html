@@ -1,1 +1,74 @@
-<p>statement works!</p>
+<div class="statement py-5">
+    <div class="container py-5">
+        <div class="row path">
+            <div class="col-12">
+                <p class="d-flex align-items-center mb-1">
+                    <span>Home</span>
+                    <span></span>
+                    <i class="far fa-circle d-flex px-2"></i>
+                    <span>My Profile</span>
+                    <i class="far fa-circle d-flex px-2"></i>
+                    <span>Balance statement</span>
+                </p>
+                <h3 class="m-0 font-weight-bold">
+                    Balance statement
+                </h3>
+            </div>
+        </div>
+
+        <div class="row table-operation my-3">
+            <div class="col-12 d-flex align-items-center justify-content-end">
+                <div class="filter mr-3">
+                    <div ngbDropdown class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center" ngbDropdownToggle>
+                            <img src="assets/imgs/icons/filter.svg" class="mr-2">
+                            <p class="m-0">
+                                Filter activities
+                            </p>
+                        </a>
+                        <div ngbDropdownMenu class="dropdown-menu">
+                            <div class="my-3 white-region px-3">
+                                <h5 class="mb-0">
+                                    Balance statement filters
+                                </h5>
+
+                                <div class="d-block d-md-flex align-items-center my-4">
+                                    <label class="customCheckBox mr-0 mr-md-3">
+                                        Bank transactions
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                                    <label class="customCheckBox">
+                                        Application transactions
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <a [routerLink]="['/']"
+                                    class="blueBtn btn text-uppercase font-weight-bolder my-1 mr-3">
+                                    Apply filters
+                                </a>
+
+                                <a [routerLink]="['/']"
+                                    class="transBtn btn text-uppercase font-weight-bolder my-1 text-dark">
+                                    Clear filters
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search">
+                    <div class="input-group mb-0">
+                        <input type="text" class="form-control border-0 rounded-0" aria-label="Find activity" placeholder="Find activity">
+                        <div class="input-group-append">
+                            <span class="input-group-text border-0 rounded-0 p-0 px-2"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

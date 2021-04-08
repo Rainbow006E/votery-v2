@@ -1,0 +1,103 @@
+.statement {
+    background-color: #f2f2f2;
+    .path {
+        i {
+            font-size: 6px;
+        }
+    }
+
+    // table filter and search section
+    .table-operation {
+        // filter section
+        .filter {
+            .dropdown-toggle::after {
+                display: none;
+            }
+            
+            .dropdown.avatar .dropdown-toggle::after {
+                display: none;
+            }
+    
+            .dropdown {
+                .dropdown-toggle {
+                    cursor: pointer;
+                    a p {
+                        font-size: 1.143em;
+                    }
+                }
+                .dropdown-menu {
+                    width: 617px;
+                    max-width: calc(100vw - 30px);
+                    right: 0;
+                    transform: translate(0px, 32px) !important;
+                    &::before {
+                        top: -11px;
+                        left: unset;
+                        right: 28px;
+                        border-bottom: 1em solid;
+                        border-right: 1em solid transparent;
+                        border-left: 1em solid transparent;
+                    }
+                    a.blueBtn {
+                        background: linear-gradient( 180deg, #1264AD, #48C6C9);
+                        border-radius: 6px;
+                        font-size: 1.143em;
+                    }
+                    a.transBtn {
+                        background: transparent;
+                        border-radius: 6px;
+                        font-size: 1.143em;
+                        border: 1px solid #a0a0a0;
+                        color: #a0a0a0 !important;
+                    }
+                }
+            }
+    
+            a:not(.btn):not(.dropdown-item) {
+                color: black;
+            }
+        }
+        // search section
+        .search {
+            .input-group {
+                border-radius: 6px;
+                border: 1px solid gray;
+                input.form-control {
+                    &:focus {
+                        background-color: transparent;
+                    }
+                    &::placeholder {
+                        color: black;
+                        font-size: 1.143em;
+                        line-height: 1.8em;
+                    }
+                }
+                .input-group-append {
+                    .input-group-text {
+                        border-radius: 0;
+                        background-color: transparent;
+                        border-right: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .statement {
+        .table-operation {
+            .filter {
+                .dropdown {
+                    .dropdown-menu {
+                        right: unset;
+                        left: 0;
+                        &::before {
+                            left: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

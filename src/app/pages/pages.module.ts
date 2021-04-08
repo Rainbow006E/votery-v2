@@ -11,6 +11,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HistoryComponent } from './history/history.component';
 import { StatementComponent } from './statement/statement.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { StatementComponent } from './statement/statement.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    NgbModule
   ]
 })
 export class PagesModule { }
