@@ -1,0 +1,88 @@
+.modal-container {
+    background: #F4F4F4;
+    border-radius: 12px;
+    position: relative;
+    .modal-header {
+        height: 0;
+        padding: 0;
+        button.close {
+            position: absolute;
+            right: -18px;
+            top: -24px;
+            z-index: 3;
+            color: white;
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .modal-body {
+        .element {
+            .field {
+                font-size: 0.93em;
+            }
+            .value {
+                font-size: 1.143em;
+            }
+    
+            .activity.deposit .value {
+                color: #1264AD;
+            }
+            .activity.prize-payout .value {
+                color: #1264AD;
+            }
+            .activity.withdraw .value {
+                color: #F8007A;
+            }
+            .activity.participation-fee .value {
+                color: #F8007A;
+            }
+        }
+
+        .votingResults {
+            background-color: white;
+            border-radius: 12px;
+            .commonNumber {
+                background: gray;
+                border-radius: 50%;
+                color: white;
+                width: 34px;
+                height: 34px;
+                text-align: center;
+                font-size: 1.43em;
+            }
+            .commonNumber.active {
+                background: linear-gradient(180deg, #1264ad, #48c6c9);
+            }
+            .count {
+                border: 1px solid gray;
+                border-radius: 6px;
+                width: 100%;
+                min-width: 38px;
+                max-width: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal-container {
+        width: calc(100vw - 18px);
+        .modal-header {
+            button.close {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                font-size: 32px;
+                top: 24px;
+                right: 24px;
+                color: black;
+                border: 2px solid black;
+            }
+        }
+    }
+}

@@ -1,0 +1,242 @@
+.history {
+    background-color: #f2f2f2;
+    .path {
+        h2 {
+            font-size: 1.714em;
+        }
+        i {
+            font-size: 6px;
+        }
+    }
+
+    // table filter and search section
+    .table-operation {
+        // filter section
+        .filter {
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown.avatar .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown {
+                .dropdown-toggle {
+                    cursor: pointer;
+                    a p {
+                        font-size: 1.143em;
+                    }
+                }
+                .dropdown-menu {
+                    width: 617px;
+                    max-width: calc(100vw - 30px);
+                    right: 0;
+                    transform: translate(0px, 32px) !important;
+                    &::before {
+                        top: -11px;
+                        left: unset;
+                        right: 28px;
+                        border-bottom: 1em solid;
+                        border-right: 1em solid transparent;
+                        border-left: 1em solid transparent;
+                    }
+                    a.blueBtn {
+                        background: linear-gradient(180deg, #1264ad, #48c6c9);
+                        border-radius: 6px;
+                        font-size: 1.143em;
+                    }
+                    a.transBtn {
+                        background: transparent;
+                        border-radius: 6px;
+                        font-size: 1.143em;
+                        border: 1px solid #a0a0a0;
+                        color: #a0a0a0 !important;
+                    }
+                }
+            }
+            a:not(.btn):not(.dropdown-item) {
+                color: black;
+            }
+        }
+    }
+
+    .history-table {
+        table.mat-table {
+            width: 100%;
+            box-shadow: none;
+            background-color: transparent;
+            // mat cell default width
+            .mat-cell {
+                width: 12%;
+            }
+
+            // application cell
+            .mat-column-application {
+                width: 14%;
+            }
+
+            // room type cell
+            .mat-column-roomType {
+                width: 14%;
+            }
+
+            // acitivity cell
+            .mat-column-activity {
+                width: 14%;
+            }
+
+            // amount and currency cell
+            .mat-column-amountAndCurrency {
+                width: 14%;
+            }
+            
+            // date cell
+            .mat-column-date {
+                width: 14%;
+            }
+
+            // voting results cell
+            .mat-column-votingResults {
+                width: 32%;
+            }
+
+            thead {
+                background-color: #f2f2f2;
+                tr.mat-header-row {
+                    background-color: transparent;
+                    th {
+                        border: 0;
+                    }
+                    th.mat-column-amountAndCurrency {
+                        padding: 0px 28px;
+                    }
+                }
+            }
+            tbody {
+                box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%),
+                    0px 3px 14px 2px rgb(0 0 0 / 12%);
+                border-radius: 12px;
+                tr {
+                    td {
+                        background: transparent;
+                        border: 0;
+                        width: 12%;
+                    }
+                }
+                tr:not(:last-child) td {
+                    background: transparent;
+                    background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+                    background-position: bottom;
+                    background-size: 11px 1px;
+                    background-repeat: repeat-x;
+                }
+
+                .mat-column-groupHeader {
+                    background-image: none !important;
+                }
+                
+                // change text color according to the activity class name
+                .mat-column-activity.deposit {
+                    color: #1264AD;
+                }
+                .mat-column-activity.prize-payout {
+                    color: #1264AD;
+                }
+                .mat-column-activity.withdraw {
+                    color: #F8007A;
+                }
+                .mat-column-activity.participation-fee {
+                    color: #F8007A;
+                }
+
+                // amount and currency cell
+                .mat-column-amountAndCurrency {
+                    .amount {
+                        width: 50px;
+                        float: left;
+                        span {
+                            float: right;
+                        }
+                    }
+                }
+
+                // voting results cell
+                .mat-column-votingResults {
+                    .commonNumbers {
+                        .commonNumber {
+                            background: gray;
+                            border-radius: 50%;
+                            color: white;
+                            width: 20px;
+                            height: 20px;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                        .commonNumber.active {
+                            background: linear-gradient(180deg, #1264ad, #48c6c9);
+                        }
+                    }
+                    .resultBtn {
+                        color: #1264AD;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .history {
+        .table-operation {
+            .filter {
+                .dropdown {
+                    .dropdown-menu {
+                    }
+                }
+            }
+        }
+
+        .history-table {
+            table.mat-table {
+                // display none about other columns when mobile
+                .mat-column-roomType, .mat-column-activity, .mat-column-date {
+                    display: none;
+                }
+
+                // first cell padding change
+                .mat-header-cell:first-of-type, .mat-cell:first-of-type{
+                    padding-left: 12px;
+                }
+
+                // last cell padding change
+                .mat-header-cell:last-of-type, .mat-cell:last-of-type {
+                    padding-right: 12px;
+                }
+
+                // column width change adjustment
+                .mat-column-application {
+                    width: 25%;
+                }
+                .mat-column-amountAndCurrency {
+                    width: 46%;
+                }
+                .mat-column-votingResults {
+                    width: 29%;
+                    text-align: right;
+                }
+
+                thead {
+                    tr.mat-header-row {
+                        // change amount and currency cell padding(reduce)
+                        th.mat-column-amountAndCurrency {
+                            padding: 0px 2px;
+                            padding-left: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

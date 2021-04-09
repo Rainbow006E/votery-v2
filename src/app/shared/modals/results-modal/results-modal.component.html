@@ -1,0 +1,93 @@
+<div class="modal-container my-4 my-md-0">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> </h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body p-0">
+        <div class="row m-0 mx-3 mt-4">
+            <div class="col-4 col-md px-1 application">
+                <p class="field">
+                    Application
+                </p>
+                <img [src]="'assets/imgs/payments/' + element.application + '.svg'">
+            </div>
+
+            <div class="col-4 col-md px-1 roomType">
+                <p class="field">
+                    Room type
+                </p>
+                <p class="value font-weight-bold">
+                    {{ element.roomType }}
+                </p>
+            </div>
+
+            <div class="col-4 col-md px-1 activity" [class]="element.activity.class">
+                <p class="field">
+                    Activity
+                </p>
+                <p class="value">
+                    {{ element.activity.name }}
+                </p>
+            </div>
+
+            <div class="col-6 col-md px-1 amountAndCurrency">
+                <p class="field">
+                    Amount & currency
+                </p>
+                <div class="value d-flex align-items-center">
+                    <div class="amount mr-2">
+                        <span>{{element.amountAndCurrency.amount > 0 ? '+' : ''}} {{element.amountAndCurrency.amount}}</span>
+                    </div>
+                    <img class="mr-2" [src]="'assets/imgs/currencies/gray-' + element.amountAndCurrency.icon + '.svg'">
+                    <span class="text-uppercase">{{element.amountAndCurrency.currency}}</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md px-1 date">
+                <p class="field">
+                    Date
+                </p>
+                <p class="value">
+                    {{element.date | date:'dd.MM.yyyy HH:mm' }}
+                </p>
+            </div>
+        </div>
+
+        <div class="row m-0">
+            <div class="col-12 p-3 votingResults">
+                <div>
+                    <h3 class="m-0 font-weight-bold text-center">
+                        Voting results
+                    </h3>
+                </div>
+
+                <div class="row">
+                    <div *ngFor="let vote of element.votingResults"
+                    class="col px-1 my-1">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="commonNumber" [class.active]="vote.active">
+                                {{ vote.commonNumber }}
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="count text-center mt-2">
+                                {{ vote.count }}
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="col-12 my-3">
+                <h3 class="m-0 text-center">
+                    Results of all members
+                </h3>
+                <p class="text-center">
+                    {{ element.members }} members have {{ commonNumbers }} common numbers
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

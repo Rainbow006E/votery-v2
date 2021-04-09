@@ -25,25 +25,31 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ResultsModalComponent } from './modals/results-modal/results-modal.component';
 
 @NgModule({
   exports: [
     MatInputModule,
     MatTableModule,
     MatFormFieldModule
-  ]
+  ],
+  declarations: []
 })
 export class MaterialModule { }
 
 @NgModule({
   declarations: [
+    // Header and footers
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
+    PrivacyComponent,
     FooterTopComponent,
     FooterBottomComponent,
     FooterGapComponent,
     Header2Component,
+
+    // Modals
     AuthModalComponent,
     ForgotModalComponent,
     EmailSentModalComponent,
@@ -53,7 +59,7 @@ export class MaterialModule { }
     BackupCodeModalComponent,
     TwofaDoneModalComponent,
     TurnOffModalComponent,
-    PrivacyComponent
+    ResultsModalComponent
   ],
   imports: [
     CommonModule,
@@ -63,13 +69,16 @@ export class MaterialModule { }
     RouterModule
   ],
   exports: [
+    // Header and footers
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
     FooterTopComponent,
     FooterBottomComponent,
     FooterGapComponent,
+    PrivacyComponent,
     Header2Component,
+    // Modals
     AuthModalComponent,
     ForgotModalComponent,
     EmailSentModalComponent,
@@ -79,7 +88,6 @@ export class MaterialModule { }
     BackupCodeModalComponent,
     TwofaDoneModalComponent,
     TurnOffModalComponent,
-    PrivacyComponent
   ]
 })
 export class SharedModule { }

@@ -97,6 +97,9 @@
                     th {
                         border: 0;
                     }
+                    th.mat-column-amountAndCurrency {
+                        padding: 0px 28px;
+                    }
                 }
             }
             tbody {
@@ -165,6 +168,18 @@
                             left: 28px;
                         }
                     }
+                }
+            }
+        }
+
+        .statement-table {
+            table.mat-table {
+                // display none about other columns when mobile
+                .mat-column-type, .mat-column-date, .mat-column-status, .mat-column-withdrawDate {
+                    display: none;
+                }
+                .mat-column-activity {
+                    padding: 0 16px
                 }
             }
         }
