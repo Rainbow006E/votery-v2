@@ -19,12 +19,21 @@ import { BackupCodeModalComponent } from './modals/backup-code-modal/backup-code
 import { TwofaDoneModalComponent } from './modals/twofa-done-modal/twofa-done-modal.component';
 import { TurnOffModalComponent } from './modals/turn-off-modal/turn-off-modal.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+@NgModule({
+  exports: [
+    MatInputModule,
+    MatTableModule,
+    MatFormFieldModule
+  ]
+})
+export class MaterialModule { }
 
 @NgModule({
   declarations: [
@@ -48,13 +57,10 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     NgbModule,
-    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
-    MatTableModule
+    RouterModule
   ],
   exports: [
     NavbarComponent,
@@ -73,9 +79,7 @@ import { MatTableModule } from '@angular/material/table';
     BackupCodeModalComponent,
     TwofaDoneModalComponent,
     TurnOffModalComponent,
-    PrivacyComponent,
-
-    MatTableModule
+    PrivacyComponent
   ]
 })
 export class SharedModule { }

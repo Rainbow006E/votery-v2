@@ -12,7 +12,12 @@ const routes: Routes =[
     },
     {
         path: "",
-        loadChildren: './pages/pages.module#PagesModule'
+        children: [
+            {
+                path: "",
+                loadChildren: './pages/pages.module#PagesModule'
+            }
+        ]
     },
     {
         path: "",

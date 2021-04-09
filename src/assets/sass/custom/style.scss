@@ -1,8 +1,12 @@
+:root {
+    $margin-base-vertical: 15px !default;
+}
+
 // scroll setting when open modal
 .modal-open {
     padding-right: 0 !important;
     position: fixed;
-    overflow-y:scroll
+    overflow-y: scroll;
 }
 
 // modal overlay opacity set
@@ -60,7 +64,7 @@ label.customCheckBox {
         }
     }
     /* Hide the browser's default checkbox */
-    input[type="checkbox"]{
+    input[type="checkbox"] {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -69,7 +73,7 @@ label.customCheckBox {
         /* When the checkbox is checked, add a blue background */
         &:checked {
             ~ .checkmark {
-                background: linear-gradient( 180deg, #1264AD, #48C6C9);
+                background: linear-gradient(180deg, #1264ad, #48c6c9);
                 border: 0;
                 /* Show the checkmark when checked */
                 &::after {
@@ -103,5 +107,67 @@ label.customCheckBox {
             -ms-transform: rotate(45deg);
             transform: rotate(45deg);
         }
+    }
+}
+
+.mat-body,
+.mat-body-1,
+.mat-typography {
+    font-family: "FuturaPT" !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+div,
+table {
+    font-family: "FuturaPT" !important;
+}
+
+h1, .h1 {
+    font-size: 3.4em !important;
+    line-height: 1.15 !important;
+    margin-bottom: 30px !important;
+}
+h2, .h2{
+    font-size: 2.5em !important;
+    margin-bottom: 30px !important;
+}
+h3, .h3{
+    font-size: 1.825em !important;
+    margin-bottom: 30px !important;
+    line-height: 1.4em !important;
+}
+h4, .h4{
+    font-size: 1.5em !important;
+    line-height: 1.45em !important;
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+
+    & + .category,
+    &.title + .category{
+        margin-top: -10px !important;
+    }
+}
+h5, .h5 {
+    font-size: 1.3em !important;
+    line-height: 1.4em !important;
+    margin-bottom: 15px !important;
+}
+h6, .h6{
+    font-size: 0.9em !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+p{
+    line-height: 1.61em;
+    font-size: 1.14em !important;
+    .description &,
+    &.description{
+        font-size: 1.14em !important;
     }
 }

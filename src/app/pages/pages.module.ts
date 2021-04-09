@@ -13,6 +13,8 @@ import { HistoryComponent } from './history/history.component';
 import { StatementComponent } from './statement/statement.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { MaterialModule } from 'app/shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     PagesRoutingModule,
-    NgbModule
+    NgbModule,
+    MaterialModule
   ]
 })
 export class PagesModule { }

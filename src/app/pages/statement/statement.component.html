@@ -10,9 +10,9 @@
                     <i class="far fa-circle d-flex px-2"></i>
                     <span>Balance statement</span>
                 </p>
-                <h3 class="m-0 font-weight-bold">
+                <h2 class="m-0 font-weight-bold">
                     Balance statement
-                </h3>
+                </h2>
             </div>
         </div>
 
@@ -46,8 +46,7 @@
                                     </label>
                                 </div>
 
-                                <a [routerLink]="['/']"
-                                    class="blueBtn btn text-uppercase font-weight-bolder my-1 mr-3">
+                                <a [routerLink]="['/']" class="blueBtn btn text-uppercase font-weight-bolder my-1 mr-3">
                                     Apply filters
                                 </a>
 
@@ -59,16 +58,81 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="search">
                     <div class="input-group mb-0">
-                        <input type="text" class="form-control border-0 rounded-0" aria-label="Find activity" placeholder="Find activity">
+                        <input type="text" class="form-control border-0 rounded-0" aria-label="Find activity"
+                            placeholder="Find activity">
                         <div class="input-group-append">
-                            <span class="input-group-text border-0 rounded-0 p-0 px-2"><i class="fas fa-search"></i></span>
+                            <span class="input-group-text border-0 rounded-0 p-0 px-2"><i
+                                    class="fas fa-search"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="statement-table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Type Column -->
+                <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef> Type </th>
+                    <td mat-cell *matCellDef="let element">
+                        <img [src]="'assets/imgs/payments/' + element.type + '.svg'">
+                    </td>
+                </ng-container>
+
+                <!-- Activity Column -->
+                <ng-container matColumnDef="activity">
+                    <th mat-header-cell *matHeaderCellDef> Activity </th>
+                    <td mat-cell *matCellDef="let element" [ngClass]="element.activity.class"> {{element.activity.name}}
+                    </td>
+                </ng-container>
+
+                <!-- Amount & currency Column -->
+                <ng-container matColumnDef="amountAndCurrency">
+                    <th mat-header-cell *matHeaderCellDef> Amount & currency </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div class="d-flex align-items-center">
+                            <div class="amount mr-2">
+                                <span>{{element.amountAndCurrency.amount > 0 ? '+' : ''}} {{element.amountAndCurrency.amount}}</span>
+                            </div>
+                            <img class="mr-2" [src]="'assets/imgs/currencies/gray-' + element.amountAndCurrency.icon + '.svg'">
+                            <span class="text-uppercase">{{element.amountAndCurrency.currency}}</span>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Date Column -->
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date | date:'dd.MM.yyyy HH:mm' }} </td>
+                </ng-container>
+
+                <!-- Status Column -->
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                </ng-container>
+
+                <!-- Withdraw date Column -->
+                <ng-container matColumnDef="withdrawDate">
+                    <th mat-header-cell *matHeaderCellDef> Withdraw date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.withdrawDate | date:'dd.MM.yyyy HH:mm' }} </td>
+                </ng-container>
+
+                <!-- Group Column -->
+                <ng-container matColumnDef="groupHeader">
+                    <td mat-cell *matCellDef="let group"> {{group.group}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                <tr mat-row *matRowDef="let row; columns: ['groupHeader']; when: isGroup"></tr>
+            </table>
         </div>
     </div>
 </div>

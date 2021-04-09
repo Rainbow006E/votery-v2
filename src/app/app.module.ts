@@ -1,5 +1,4 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +12,7 @@ import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component
 import { AuthenticatedLayoutComponent } from './layouts/authenticated-layout/authenticated-layout.component';
 
 import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -23,9 +23,9 @@ import { SharedModule } from './shared/shared.module';
         AuthenticatedLayoutComponent,
     ],
     imports: [
+        CommonModule,
         BrowserAnimationsModule,
         NgbModule,
-        BrowserModule,
         FormsModule,
         ReactiveFormsModule,
         RouterModule,

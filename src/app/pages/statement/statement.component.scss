@@ -1,6 +1,9 @@
 .statement {
     background-color: #f2f2f2;
     .path {
+        h2 {
+            font-size: 1.714em;
+        }
         i {
             font-size: 6px;
         }
@@ -13,11 +16,11 @@
             .dropdown-toggle::after {
                 display: none;
             }
-            
+
             .dropdown.avatar .dropdown-toggle::after {
                 display: none;
             }
-    
+
             .dropdown {
                 .dropdown-toggle {
                     cursor: pointer;
@@ -39,7 +42,7 @@
                         border-left: 1em solid transparent;
                     }
                     a.blueBtn {
-                        background: linear-gradient( 180deg, #1264AD, #48C6C9);
+                        background: linear-gradient(180deg, #1264ad, #48c6c9);
                         border-radius: 6px;
                         font-size: 1.143em;
                     }
@@ -52,7 +55,6 @@
                     }
                 }
             }
-    
             a:not(.btn):not(.dropdown-item) {
                 color: black;
             }
@@ -78,6 +80,73 @@
                         background-color: transparent;
                         border-right: 0 !important;
                     }
+                }
+            }
+        }
+    }
+
+    .statement-table {
+        table.mat-table {
+            width: 100%;
+            box-shadow: none;
+            background-color: transparent;
+            thead {
+                background-color: #f2f2f2;
+                tr.mat-header-row {
+                    background-color: transparent;
+                    th {
+                        border: 0;
+                    }
+                }
+            }
+            tbody {
+                box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%),
+                    0px 3px 14px 2px rgb(0 0 0 / 12%);
+                border-radius: 12px;
+                tr {
+                    td {
+                        background: transparent;
+                        border: 0;
+                        width: 12%;
+                    }
+                }
+                tr:not(:last-child) td {
+                    background: transparent;
+                    background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+                    background-position: bottom;
+                    background-size: 11px 1px;
+                    background-repeat: repeat-x;
+                }
+
+                .mat-column-groupHeader {
+                    background-image: none !important;
+                }
+
+                .mat-column-activity.deposit {
+                    color: #1264AD;
+                }
+                .mat-column-activity.prize-payout {
+                    color: #1264AD;
+                }
+                .mat-column-activity.withdraw {
+                    color: #F8007A;
+                }
+                .mat-column-activity.participation-fee {
+                    color: #F8007A;
+                }
+
+                .mat-column-amountAndCurrency {
+                    .amount {
+                        width: 50px;
+                        float: left;
+                        span {
+                            float: right;
+                        }
+                    }
+                }
+
+                .mat-column-status {
+                    color: #48C6C9;
                 }
             }
         }
