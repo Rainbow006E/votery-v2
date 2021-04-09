@@ -1,5 +1,5 @@
 .modal-container {
-    background-color: #F4F4F4;
+    background: #f4f4f4;
     border-radius: 12px;
     position: relative;
     .modal-header {
@@ -39,6 +39,16 @@
             font-size: 1.143em;
             border: 1px solid #1264AD;
             color: #1264AD;
+        }
+    }
+    .modal-footer {
+        .bottom-circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img {
+                float: right;
+            }
         }
     }
 }

@@ -1,5 +1,8 @@
-<div class="modal-container my-4 my-md-0">
+<div class="modal-container my-4 my-md-3">
     <div class="modal-header">
+        <div class="top-circle ml-3">
+            <img src="assets/imgs/modal-top-circle.svg">
+        </div>
         <h4 class="modal-title" id="modal-title"> </h4>
         <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
             <span aria-hidden="true">&times;</span>
@@ -88,6 +91,11 @@
                     {{ element.members }} members have {{ commonNumbers }} common numbers
                 </p>
             </div>
+        </div>
+    </div>
+    <div class="modal-footer p-0">
+        <div class="bottom-circle m-0 w-100">
+            <img src="assets/imgs/modal-bottom-circle.svg" class="mr-4">
         </div>
     </div>
 </div>

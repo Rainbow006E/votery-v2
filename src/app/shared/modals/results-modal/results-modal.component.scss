@@ -1,5 +1,5 @@
 .modal-container {
-    background: #F4F4F4;
+    background: #f4f4f4;
     border-radius: 12px;
     position: relative;
     .modal-header {
@@ -64,6 +64,16 @@
                 width: 100%;
                 min-width: 38px;
                 max-width: 48px;
+            }
+        }
+    }
+    .modal-footer {
+        .bottom-circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img {
+                float: right;
             }
         }
     }

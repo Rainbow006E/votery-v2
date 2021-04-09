@@ -1,5 +1,5 @@
 .modal-container {
-    background-color: white;
+    background-color: #f4f4f4;
     width: 380px;
     max-width: 380px;
     border-radius: 12px;
@@ -36,6 +36,16 @@
             background: linear-gradient( 180deg, #1264AD, #48C6C9);
             border-radius: 6px;
             font-size: 1.143em;
+        }
+    }
+    .modal-footer {
+        .bottom-circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img {
+                float: right;
+            }
         }
     }
 }

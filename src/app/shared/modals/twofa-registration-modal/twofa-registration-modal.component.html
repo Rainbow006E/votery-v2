@@ -1,12 +1,15 @@
 <div class="twofa-registration">
-    <div class="modal-container py-5">
+    <div class="modal-container">
         <div class="modal-header">
+            <div class="top-circle ml-3">
+                <img src="assets/imgs/modal-top-circle.svg">
+            </div>
             <h4 class="modal-title" id="modal-title"> </h4>
             <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body p-0 mx-3 mx-md-5">
+        <div class="modal-body p-0 mx-3 mx-md-5 my-5">
             <div class="row m-0">
                 <div class="col-12">
                     <h3 class="m-0 mb-1">
@@ -31,6 +34,11 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal-footer p-0">
+            <div class="bottom-circle m-0 w-100">
+                <img src="assets/imgs/modal-bottom-circle.svg" class="mr-4">
             </div>
         </div>
     </div>
