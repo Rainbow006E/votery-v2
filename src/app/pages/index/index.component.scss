@@ -25,11 +25,11 @@
         }
         .phone {
             position: absolute;
-            top: 64px;
+            top: 82px;
             right: 0;
             z-index: 3;
-            width: 600px;
-            width: 40%;
+            max-width: 600px;
+            max-height: 860px;
         }
     }
 
@@ -65,7 +65,7 @@
             }
         }
         .games {
-            background-color: #e7e7e7;
+            background-color: #dedede;
             position: relative;
             .games-pic {
                 position: absolute;
@@ -171,7 +171,7 @@
     }
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 991px) {
     .wrapper {
         .index-header {
             .container {

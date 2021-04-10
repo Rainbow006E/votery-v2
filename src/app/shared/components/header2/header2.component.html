@@ -15,7 +15,7 @@
         </div>
 
         <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
-            <ul class="navbar-nav ml-auto text-uppercase d-flex align-items-center">
+            <ul class="navbar-nav ml-auto text-uppercase d-block d-md-flex align-items-center">
                 <li class="nav-item py-1 py-md-3">
                     <div ngbDropdown class="dropdown application">
                         <a class="nav-link dropdown-toggle d-flex align-items-center" ngbDropdownToggle>
@@ -105,56 +105,59 @@
                     </div>
                 </li>
 
-                <div class="paymentSection d-none d-md-flex align-items-center justify-content-around text-dark">
+                <div class="paymentSection d-block d-md-flex align-items-center justify-content-around text-dark">
                     <div>
                         <p class="m-0 text-dark text-capitalize">
                             Balance: &nbsp;
                         </p>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center mx-2">
+                    <div class="d-block d-md-flex align-items-center justify-content-center mx-2 my-1">
                         <img src="assets/imgs/currencies/euro.svg" class="mr-1">
                         <p class="m-0 font-weight-bold">
                             24,81
                         </p>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center mx-2">
+                    <div class="d-block d-md-flex align-items-center justify-content-center mx-2 my-1">
                         <img src="assets/imgs/currencies/bitcoin.svg" class="mr-1">
                         <p class="m-0 font-weight-bold">
                             0,00041
                         </p>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center mx-2">
+                    <div class="d-block d-md-flex align-items-center justify-content-center mx-2 my-1">
                         <img src="assets/imgs/currencies/ethereum.svg" class="mr-1">
                         <p class="m-0 font-weight-bold">
                             0,00
                         </p>
                     </div>
 
-                    <div class="d-flex align-items-center justify-content-center ml-2">
-                        <a class="nav-link p-0" href="javascript: void(0)" (click)="deposit()">
-                            <img src="assets/imgs/currencies/deposit.svg" class="mr-1">
-                        </a>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mr-2">
-                        <a class="nav-link p-0" href="javascript: void(0)" (click)="withdraw()">
-                            <img src="assets/imgs/currencies/withdraw.svg" class="mr-1">
-                        </a>
+                    <div class="d-flex align-items-center justify-content-start justify-content-md-center">
+                        <div class="d-flex align-items-center justify-content-center ml-2">
+                            <a class="nav-link p-0 m-0" href="javascript: void(0)" (click)="deposit()">
+                                <img src="assets/imgs/currencies/deposit.svg" class="mr-1">
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mr-2">
+                            <a class="nav-link p-0" href="javascript: void(0)" (click)="withdraw()">
+                                <img src="assets/imgs/currencies/withdraw.svg" class="mr-1">
+                            </a>
+                        </div>
                     </div>
 
-                    <li class="nav-item pl-2 pr-3 py-1 py-md-3 d-flex align-items-center">
+                    <li class="nav-item pl-2 pr-3 py-1 py-md-3 d-none d-md-flex align-items-center">
                         <img src="assets/imgs/subtract.svg" alt="">
                     </li>
 
-                    <div class="mr-2 text-capitalize font-weight-bold">
-                        <p class="m-0">
-                            John Doe
-                        </p>
-                    </div>
-
                     <li class="nav-item py-1 py-md-3">
-                        <div ngbDropdown class="dropdown avatar d-flex align-items-center justify-content-center">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center" ngbDropdownToggle>
-                                <img src="assets/imgs/union.svg" alt="">
+                        <div ngbDropdown class="dropdown avatar d-block d-md-flex align-items-center justify-content-center">
+                            <a class="nav-link dropdown-toggle d-flex flex-row-reverse flex-md-row align-items-center justify-content-end justify-content-md-center mx-2 mx-md-0" ngbDropdownToggle>
+                                <div class="mr-2 text-capitalize font-weight-bold">
+                                    <p class="m-0">
+                                        John Doe
+                                    </p>
+                                </div>
+                                <div class="avatar-img d-flex align-items-center justify-content-center mr-2 mr-md-0">
+                                    <img src="assets/imgs/union.svg" alt="">
+                                </div>
                             </a>
                             <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item font-weight-bold text-left text-md-right" routerLink="/profile-settings"> Profile settings </a>
