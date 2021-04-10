@@ -7,7 +7,12 @@
   </div>
   <div class="modal-body">
     <div class="row m-0">
+      <!-- Login Section -->
       <div class="col-12 col-md-6 p-3 p-md-5 login">
+        <!-- Top Circle part -->
+        <div class="top-circle ml-3">
+          <img src="assets/imgs/modal-top-circle.svg">
+        </div>
         <h3 class="m-0">
           Login
         </h3>
@@ -16,9 +21,10 @@
           We’re glad to see you back!
         </p>
 
+        <!-- Login Form Part -->
         <form [formGroup]="loginForm">
           <div class="form-row">
-
+            <!-- Email Input -->
             <div class="col-12 my-2">
               <input type="text" class="form-control border custom" formControlName="email" placeholder="Your e-mail"
                 [class.border-danger]="lf.email.invalid && (lf.email.dirty || lf.email.touched)"
@@ -33,6 +39,7 @@
               </div>
             </div>
 
+            <!-- Password Input -->
             <div class="col-12 my-2">
               <div class="form-group">
                 <div class="input-group border"
@@ -60,12 +67,14 @@
               </div>
             </div>
 
+            <!-- Login Button -->
             <div class="col-12 my-2">
               <a class="blueBtn btn btn-primary text-uppercase w-100" (click)="login()">
                 Login
               </a>
             </div>
 
+            <!-- Forgot password -->
             <div class="col-12 my-2">
               <a class="forgot" (click)="forgot()">
                 Forgot password
@@ -73,6 +82,7 @@
             </div>
           </div>
 
+          <!-- Social Login Part -->
           <div class="form-row mt-0 mt-md-5 pt-3 pt-md-5 pb-3">
             <div class="col-12 mt-3">
               <p>
@@ -94,7 +104,14 @@
             </div>
           </div>
         </form>
+
+        <!-- Bottom circle part -->
+        <div class="bottom-circle m-0 w-100">
+          <img src="assets/imgs/modal-bottom-circle.svg" class="mr-4">
+        </div>
       </div>
+
+      <!-- Register Section -->
       <div class="col-12 col-md-6 p-3 p-md-5 register text-light">
         <h3 class="m-0">
           Create account
@@ -103,9 +120,11 @@
           In order to participate in VOTERY and win real cash, you have to create an account.
         </p>
 
+        <!-- Register Form Part -->
         <form [formGroup]="registerForm">
           <div class="form-row">
 
+            <!-- Email Input -->
             <div class="col-12 my-2">
               <input type="text" class="form-control border custom" formControlName="email" placeholder="Your e-mail"
                 [class.border-danger]="lf.email.invalid && (lf.email.dirty || lf.email.touched)"
@@ -120,6 +139,7 @@
               </div>
             </div>
 
+            <!-- Password bootstrap input group -->
             <div class="col-12 my-2">
               <div class="form-group">
                 <div class="input-group border"
@@ -147,16 +167,19 @@
               </div>
             </div>
 
+            <!-- Checkbox terms and conditions, privacy -->
             <div class="col-12 my-2 agree d-flex align-items-center justify-content-start">
               <input type="checkbox" name="agree" id="agree" class="mr-2" formControlName="agree">
               <label for="agree" class="m-0">I agree to <a (click)="termsPricacy($event)">Terms of Use</a> and <a (click)="termsPricacy($event)">Privacy Policy</a></label>
             </div>
 
+            <!-- Checkbox Enable Two Factor Authentication -->
             <div class="col-12 my-2 twofa d-flex align-items-center justify-content-start">
               <input type="checkbox" name="twofa" id="twofa" class="mr-2" formControlName="twofa" (change)="changeTwofa($event)">
               <label for="twofa" class="m-0">Enable two factor authentication</label>
             </div>
 
+            <!-- Register Button -->
             <div class="col-12 my-2">
               <a class="registerBtn btn btn-primary text-uppercase w-100" (click)="register()">
                 Register
@@ -164,6 +187,7 @@
             </div>
           </div>
 
+          <!-- Social Regsiter buttons -->
           <div class="form-row mt-3 mt-md-5 py-3">
             <div class="col-12">
               <p>
