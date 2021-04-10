@@ -112,7 +112,7 @@
                         <div class="col-12">
                             <label class="customCheckBox">
                                 Enable two factor authentication
-                                <input type="checkbox" formControlName="twofa">
+                                <input type="checkbox" formControlName="twofa" (change)="changeTwofa($event)">
                                 <span class="checkmark"></span>
                             </label>
                         </div>

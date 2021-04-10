@@ -63,6 +63,10 @@
                 input[type=checkbox] {
                     width: 20px;
                     height: 20px;
+                    cursor: pointer;
+                }
+                label {
+                    cursor: pointer;
                 }
                 a {
                     color: #124f87;

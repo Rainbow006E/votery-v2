@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TurnOffModalComponent } from 'app/shared/modals/turn-off-modal/turn-off-modal.component';
 
 @Component({
   selector: 'app-profile-settings',
@@ -31,7 +33,9 @@ export class ProfileSettingsComponent implements OnInit {
   });
   formSubmitted: boolean = false;
 
-  constructor() { }
+  constructor(
+    private ngbModal: NgbModal
+  ) { }
 
   ngOnInit(): void {
   }
@@ -66,6 +70,17 @@ export class ProfileSettingsComponent implements OnInit {
   submit() {
     this.formSubmitted = true;
     console.log('submit');
-    
+  }
+
+  changeTwofa(e) {
+    const checked = e.target.checked;
+    if (!checked) {
+      const turnOffModalRef = this.ngbModal.open(TurnOffModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-normal' });
+      turnOffModalRef.result.then((result) => {
+        console.log(result);
+      }).catch((error) => {
+        console.log(error);
+      });
+    }
   }
 }
