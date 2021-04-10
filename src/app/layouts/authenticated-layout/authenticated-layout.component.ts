@@ -1,7 +1,7 @@
 import { DOCUMENT, Location } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { NavbarComponent } from 'app/shared/components/navbar/navbar.component';
+import { Header2Component } from 'app/shared/components/header2/header2.component';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class AuthenticatedLayoutComponent implements OnInit {
   private _router: Subscription;
-  @ViewChild(NavbarComponent) navbar: NavbarComponent;
+  @ViewChild(Header2Component) navbar: Header2Component;
   path: string = "";
   
   constructor(

@@ -3,40 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from 'app/shared/services/local-storage.service';
 
 export const SlideInOutAnimation = [
-  trigger('slideInOut', [
-    state('in', style({
-      'max-height': '500px', 'display': 'block', 'visibility': 'visible'
-    })),
-    state('out', style({
-      'max-height': '0px', 'display': 'none', 'visibility': 'hidden'
-    })),
-    transition('in => out', [group([
-      animate('400ms ease-in-out', style({
-        'opacity': '0'
-      })),
-      animate('600ms ease-in-out', style({
-        'max-height': '0px'
-      })),
-      animate('700ms ease-in-out', style({
-        'visibility': 'hidden'
-      }))
-    ]
-    )]),
-    transition('out => in', [group([
-      animate('10ms ease-in-out', style({
-        'visibility': 'visible',
-        'display': 'block'
-      })),
-      animate('400ms ease-in-out', style({
-        'max-height': '250px'
-      })),
-      animate('700ms ease-in-out', style({
-        'opacity': '1',
-        'max-height': '500px'
-      }))
-    ]
-    )])
-  ]),
+  trigger('openClose', [
+    state('true', style({transform: 'translateX(0%)'})),
+    state('false', style({transform: 'translateX(120%)'})),
+    transition('false <=> true', animate('800ms ease-in'))
+  ])
 ]
 
 @Component({
@@ -46,7 +17,7 @@ export const SlideInOutAnimation = [
   animations: [SlideInOutAnimation]
 })
 export class PrivacyComponent implements OnInit {
-  animationState = 'in';
+  isOpen: boolean = true;
 
   constructor(
     private lostorageService: LocalStorageService
@@ -54,21 +25,17 @@ export class PrivacyComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.lostorageService.getItem('cookieStatus') === 'accept') {
-      this.animationState = 'out';
+      this.isOpen = false;
     } else {
-      this.animationState = 'out';
+      this.isOpen = false;
       setTimeout(() => {
-        this.animationState = 'in';
-      }, 10);
+        this.isOpen = true;
+      }, 100);
     }
   }
 
-  agreePrivacy() {
-    this.animationState = 'out';
+  ok() {
+    this.isOpen = false;
     this.lostorageService.setItem('cookieStatus', 'accept');
-  }
-
-  goPrivacy() {
-    this.animationState = 'out';
   }
 }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 
 const routes: Routes =[
     {
@@ -16,16 +15,6 @@ const routes: Routes =[
             {
                 path: "",
                 loadChildren: './pages/pages.module#PagesModule'
-            }
-        ]
-    },
-    {
-        path: "",
-        component: HomeLayoutComponent,
-        children: [
-            {
-                path: "home",
-                loadChildren: './home/home.module#HomeModule'
             }
         ]
     }

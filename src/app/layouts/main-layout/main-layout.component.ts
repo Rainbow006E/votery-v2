@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 import { DOCUMENT } from '@angular/common';
 import { Location } from '@angular/common';
-import { NavbarComponent } from 'app/shared/components/navbar/navbar.component';
+import { HeaderComponent } from 'app/shared/components/header/header.component';
 
 @Component({
   selector: 'app-main-layout',
@@ -13,7 +13,7 @@ import { NavbarComponent } from 'app/shared/components/navbar/navbar.component';
 })
 export class MainLayoutComponent implements OnInit {
   private _router: Subscription;
-  @ViewChild(NavbarComponent) navbar: NavbarComponent;
+  @ViewChild(HeaderComponent) navbar: HeaderComponent;
   path: string = "";
 
   constructor(

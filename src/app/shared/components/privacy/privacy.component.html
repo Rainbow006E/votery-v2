@@ -1,23 +1,17 @@
-<div class="container text-white" [@slideInOut]="animationState">
-    <div class="row privacy">
-        <div class="col-12">
-            <h4> We Care About Your Privacy </h4>
-        </div>
-        <div class="col-12 col-sm-6">
-            <p class="font-weight-lighter">
-                We and our partners store and/or access information on a device, such as unique
-                IDs in cookies to process personal data. You may accept or manage your choices
-                by clicking below, including your right to object where legitimate interest is used,
-                or at any time in the privacy policy page. These choices will be signaled to our
-                partners and will not affect browsing data
-            </p>
-        </div>
-        <div class="col-12 col-sm-6 d-flex align-items-center justify-content-between justify-content-sm-start">
-            <div class="whiteBtn round-btn text-left mr-0 mr-sm-3">
-                <a class="btn btn-primary btn-round btn-lg text-uppercase" (click)="agreePrivacy()"> I agree </a>
-            </div>
-            <div class="transBtn round-btn text-left">
-                <a class="btn btn-primary btn-round btn-lg text-uppercase" (click)="goPrivacy()"> NEZINU KAS TE </a>
+<div>
+    <div class="cookie d-flex align-items-center justify-content-center px-3 px-md-4" [@openClose]="isOpen ? true : false">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-between">
+                    <img src="assets/imgs/cookie.svg" class="mr-3">
+                    <p class="m-0 mr-3">
+                        To offer you the best possible experience on our website and display personalized content we use
+                        cookies.
+                    </p>
+                    <a class="blueBtn btn btn-primary btn-lg text-uppercase font-weight-bolder" (click)="ok()">
+                        Ok
+                    </a>
+                </div>
             </div>
         </div>
     </div>

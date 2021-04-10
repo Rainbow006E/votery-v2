@@ -21,6 +21,33 @@
         }
     }
     .modal-body {
+        .rotate {
+            .main {
+                position: relative;
+                background-color: transparent;
+                border-radius: 10px;
+                border-width: 2px;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                .mars-rotating {
+                    align-self: center;
+                    justify-self: center;
+                    animation: 5s rotate360 infinite linear;
+                }
+    
+                .rocket {
+                    width: 100px;
+                    height: 100px;
+                    animation: spinAround 6s linear infinite;
+                }
+            }
+
+            .main > * {
+                grid-column: 1;
+                grid-row: 1;
+            }
+        }
     }
     .modal-footer {
         .bottom-circle {
@@ -31,6 +58,24 @@
                 float: right;
             }
         }
+    }
+}
+
+// Mars infinite 360 degree rotate css animation
+@keyframes rotate360 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Rocket infinite 360 degree rotate around Mars css animation
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg) translate(48px);
+    }
+    to {
+        transform: rotate(-360deg) translate(48px);
     }
 }
 
@@ -50,7 +95,6 @@
             }
         }
         .modal-body {
-
         }
     }
 }

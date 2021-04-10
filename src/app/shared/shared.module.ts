@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { Header2Component } from './components/header2/header2.component';
 import { AuthModalComponent } from './modals/auth-modal/auth-modal.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -46,7 +45,6 @@ export class MaterialModule { }
 @NgModule({
   declarations: [
     // Header and footers
-    NavbarComponent,
     FooterComponent,
     HeaderComponent,
     PrivacyComponent,
@@ -81,7 +79,6 @@ export class MaterialModule { }
   ],
   exports: [
     // Header and footers
-    NavbarComponent,
     FooterComponent,
     HeaderComponent,
     FooterTopComponent,
