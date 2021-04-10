@@ -1,16 +1,20 @@
 <div>
-    <div class="cookie d-flex align-items-center justify-content-center px-3 px-md-4" [@openClose]="isOpen ? true : false">
+    <div class="cookie d-flex align-items-center justify-content-center px-0 px-md-4 py-3 py-md-0" [@openClose]="isOpen ? true : false">
         <div class="container text-white">
             <div class="row">
-                <div class="col-12 d-flex align-items-center justify-content-between">
-                    <img src="assets/imgs/cookie.svg" class="mr-3">
-                    <p class="m-0 mr-3">
-                        To offer you the best possible experience on our website and display personalized content we use
-                        cookies.
-                    </p>
-                    <a class="blueBtn btn btn-primary btn-lg text-uppercase font-weight-bolder" (click)="ok()">
-                        Ok
-                    </a>
+                <div class="col-12 d-block d-md-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="assets/imgs/cookie.svg" class="mr-3">
+                        <p class="m-0 mr-3">
+                            To offer you the best possible experience on our website and display personalized content we use
+                            cookies.
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a class="blueBtn btn btn-primary btn-lg text-uppercase font-weight-bolder" (click)="ok()">
+                            Ok
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -15,14 +15,10 @@
 }
 
 @media screen and (max-width: 575px) {
-    .privacy {
-        .round-btn {
-            a {
-                padding: 12px 12px;
-                font-size: 12px;
-                font-weight: bold;
-                width: 140px;
-            }
-        }
+    .cookie {
+        bottom: 6px;
+        right: 6px;
+        width: calc(100% - 12px);
+        height: auto;
     }
 }
