@@ -1,5 +1,8 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DepositModalComponent } from 'app/shared/modals/deposit-modal/deposit-modal.component';
+import { WithdrawModalComponent } from 'app/shared/modals/withdraw-modal/withdraw-modal.component';
 
 @Component({
   selector: 'app-header2',
@@ -13,7 +16,8 @@ export class Header2Component implements OnInit {
   
   constructor(
     public location: Location,
-    private element : ElementRef
+    private element : ElementRef,
+    private ngbModal: NgbModal
   ) {
     this.sidebarVisible = false;
   }
@@ -57,5 +61,25 @@ export class Header2Component implements OnInit {
     else {
       return false;
     }
+  }
+
+  deposit() {
+    const depositModalRef = this.ngbModal.open(DepositModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
+
+    depositModalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  withdraw() {
+    const withdrawlModalRef = this.ngbModal.open(WithdrawModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
+
+    withdrawlModalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 }

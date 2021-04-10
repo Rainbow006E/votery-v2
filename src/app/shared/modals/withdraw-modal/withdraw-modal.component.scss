@@ -1,0 +1,124 @@
+.modal-container {
+    background: #f4f4f4;
+    border-radius: 12px;
+    position: relative;
+    .modal-header {
+        height: 0;
+        padding: 0;
+        button.close {
+            position: absolute;
+            right: -18px;
+            top: -24px;
+            z-index: 3;
+            color: white;
+            border-radius: 50%;
+            border: 2px solid white;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .modal-body {
+        .mat-tab-group {
+            .mat-tab-header {
+                border: 0;
+                .mat-tab-label-container {
+                    .mat-tab-list {
+                        .mat-tab-labels {
+                            padding: 0 48px;
+                            .mat-tab-label {
+                                min-width: 98px;
+                                width: 98px;
+                                padding: 0;
+                            }
+                            .mat-tab-label-active {
+                                background: white;
+                                border-top-left-radius: 8px;
+                                border-top-right-radius: 8px;
+                            }
+                        }
+                        .mat-ink-bar {
+                            visibility: hidden !important;
+                        }
+                    }
+                }
+            }
+            .mat-tab-body-wrapper {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 25px 31px 63px -11px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+                .mat-tab-body {
+                    .mat-tab-body-content {
+                        // custom added div class for the tab body
+                        .deposit-body {
+                            input[type=number] {
+                                border-radius: 6px;
+                                height: 42px;
+                                font-size: 1.143em;
+                                border: 0;
+                                box-shadow: 3px 2px 12px 2px #b0b0b0;
+                                background-color: white;
+                                padding: 0 24px;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a.blueBtn {
+            background: linear-gradient( 180deg, #1264AD, #48C6C9);
+            border-radius: 6px;
+            font-size: 1.143em;
+        }
+    }
+    .modal-footer {
+        .bottom-circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img {
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .modal-container {
+        width: calc(100vw - 18px);
+        .modal-header {
+            button.close {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                font-size: 32px;
+                top: 24px;
+                right: 24px;
+                color: black;
+                border: 2px solid black;
+            }
+        }
+        .modal-body {
+            .mat-tab-group {
+                .mat-tab-header {
+                    .mat-tab-label-container {
+                        .mat-tab-list {
+                            .mat-tab-labels {
+                                padding: 0 16px;
+                                .mat-tab-label {
+                                    min-width: 70px;
+                                    width: 70px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

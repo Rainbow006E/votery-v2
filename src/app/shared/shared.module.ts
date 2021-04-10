@@ -26,12 +26,18 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ResultsModalComponent } from './modals/results-modal/results-modal.component';
+import { DepositModalComponent } from './modals/deposit-modal/deposit-modal.component';
+import { WithdrawModalComponent } from './modals/withdraw-modal/withdraw-modal.component';
+import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
+import { ProgressInModalComponent } from './modals/progress-in-modal/progress-in-modal.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   exports: [
     MatInputModule,
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTabsModule
   ],
   declarations: []
 })
@@ -59,14 +65,19 @@ export class MaterialModule { }
     BackupCodeModalComponent,
     TwofaDoneModalComponent,
     TurnOffModalComponent,
-    ResultsModalComponent
+    ResultsModalComponent,
+    DepositModalComponent,
+    WithdrawModalComponent,
+    SuccessModalComponent,
+    ProgressInModalComponent
   ],
   imports: [
     CommonModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports: [
     // Header and footers
@@ -78,16 +89,6 @@ export class MaterialModule { }
     FooterGapComponent,
     PrivacyComponent,
     Header2Component,
-    // Modals
-    AuthModalComponent,
-    ForgotModalComponent,
-    EmailSentModalComponent,
-    TermsConditionsModalComponent,
-    TwofaRegistrationModalComponent,
-    VerifyGoogleAuthModalComponent,
-    BackupCodeModalComponent,
-    TwofaDoneModalComponent,
-    TurnOffModalComponent,
   ]
 })
 export class SharedModule { }
