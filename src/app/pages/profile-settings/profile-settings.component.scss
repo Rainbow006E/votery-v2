@@ -28,12 +28,18 @@
             box-shadow: 3px 2px 12px 2px #b0b0b0;
             background-color: white;
         }
-        // input.invalid {
-        //     border: 1px solid #fe7777;
-        // }
-        // input.valid {
-        //     border: 1px solid green;
-        // }
+        
+        // input number right arrow remove
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        input[type=number] {
+            -moz-appearance:textfield;
+        }
+
         select {
             border-radius: 6px;
             height: 42px;
@@ -51,7 +57,23 @@
         }
         select.disable-text {
             color: gainsboro;
+            background-color: white;
         }
+
+        // Custom select arrow icon
+        select {
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            background: url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIPnI+py+0/hJzz0IruwjsVADs=);
+            background-repeat: no-repeat;
+            background-position: 95% 42%;
+        }
+
         input.date {
             width: 10%;
         }

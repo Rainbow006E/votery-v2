@@ -161,14 +161,16 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="SWIFT" placeholder="Bank name"
-                            [class.border-danger]="lf.SWIFT.invalid && (lf.SWIFT.dirty || lf.SWIFT.touched)"
-                            [class.border-success]="lf.SWIFT.valid && (lf.SWIFT.dirty || lf.SWIFT.touched)" required>
-                            <div *ngIf="lf.SWIFT.invalid && (lf.SWIFT.dirty || lf.SWIFT.touched)"
-                                class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.SWIFT.errors.required">
-                                    <sup>*</sup>SWIFT is required.
-                                </div>
+                            <select class="form-control border" formControlName="SWIFT" [class.disable-text]="!value('SWIFT')" placeholder="SWIFT"
+                            [class.border-danger]="lf.SWIFT.invalid && formSubmitted"
+                            [class.border-success]="lf.SWIFT.valid && formSubmitted" required>
+                                <option class="py-5" value="" disabled selected> SWIFT </option>
+                                <option class="py-5"> Select1 </option>
+                                <option class="py-5"> Select2 </option>
+                                <option class="py-5"> Select3 </option>
+                            </select>
+                            <div *ngIf="formSubmitted && lf.SWIFT.errors?.required" class="help-block mt-1 text-danger">
+                                <sup>*</sup>SWIFT is required.
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
