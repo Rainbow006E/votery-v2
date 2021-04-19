@@ -1,8 +1,14 @@
 .history {
     background-color: #f2f2f2;
     .path {
-        h2 {
-            font-size: 1.714em;
+        p {
+            span {
+                font-size: 12px;
+            }
+        }
+        h3 {
+            font-size: 24px !important;
+            font-weight: 500;
         }
         i {
             font-size: 6px;

@@ -46,7 +46,9 @@
 
 /* Customize the label (the customCheckBox) */
 label.customCheckBox {
-    display: block;
+    height: 25px;
+    display: flex;
+    align-items: center;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;

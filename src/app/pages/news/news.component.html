@@ -9,12 +9,12 @@
         </div>
 
         <div class="row news-row">
-            <div class="col-12 col-md-4" *ngFor="let new of news">
-                <img [src]="new.image" (click)="detail(new)">
-                <h4>
+            <div class="col-12 col-md-4 new-article my-3" *ngFor="let new of news" (click)="detail(new)">
+                <img [src]="new.image" class="w-100">
+                <h4 class="my-2">
                     {{ new.title }}
                 </h4>
-                <p>
+                <p class="text-justify">
                     {{ new.description }}
                 </p>
             </div>

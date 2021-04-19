@@ -1,8 +1,14 @@
 .statement {
     background-color: #f2f2f2;
     .path {
-        h2 {
-            font-size: 1.714em;
+        p {
+            span {
+                font-size: 12px;
+            }
+        }
+        h3 {
+            font-size: 24px !important;
+            font-weight: 500;
         }
         i {
             font-size: 6px;
@@ -64,7 +70,7 @@
         .search {
             .input-group {
                 border-radius: 6px;
-                border: 1px solid gray;
+                border: 1px solid #1313131a;
                 input.form-control {
                     &:focus {
                         background-color: transparent;
@@ -95,8 +101,10 @@
                 background-color: #f2f2f2;
                 tr.mat-header-row {
                     background-color: transparent;
-                    th {
+                    th.mat-header-cell {
                         border: 0;
+                        font-size: 13px;
+                        font-weight: 400 !important;
                     }
                     th.mat-column-amountAndCurrency {
                         padding: 0px 28px;

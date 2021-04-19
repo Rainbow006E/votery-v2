@@ -64,7 +64,7 @@ export class Header2Component implements OnInit {
   }
 
   deposit() {
-    const depositModalRef = this.ngbModal.open(DepositModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
+    const depositModalRef = this.ngbModal.open(DepositModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-medium' });
 
     depositModalRef.result.then((result) => {
       console.log(result);
@@ -74,7 +74,7 @@ export class Header2Component implements OnInit {
   }
 
   withdraw() {
-    const withdrawlModalRef = this.ngbModal.open(WithdrawModalComponent, { backdrop: 'static', centered: true, size: 'lg' });
+    const withdrawlModalRef = this.ngbModal.open(WithdrawModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-medium' });
 
     withdrawlModalRef.result.then((result) => {
       console.log(result);

@@ -1,11 +1,27 @@
 .news {
     background-color: #f2f2f2;
+
+    h2 {
+        font-size: 32px !important;
+    }
+
     .news-row {
         :first-child img {
             border-top-left-radius: 94px;
         }
         :last-child img {
             border-bottom-right-radius: 94px;
+        }
+        .new-article {
+            cursor: pointer;
+            h4 {
+                font-size: 22px !important;
+                font-weight: 450 !important;
+            }
+            p {
+                font-size: 17px !important;
+                line-height: 27.2px !important;
+            }
         }
     }
 
@@ -14,9 +30,5 @@
         border-radius: 12px;
         font-size: 1.143em;
         border: 1px solid #222222;
-    }
-
-    img {
-        cursor: pointer;
     }
 }
