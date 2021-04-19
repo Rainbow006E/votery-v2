@@ -14,7 +14,7 @@
                 <p class="field">
                     Application
                 </p>
-                <img [src]="'assets/imgs/payments/' + element.application + '.svg'">
+                <img [src]="'assets/imgs/payments/' + element.application + '-trim.svg'">
             </div>
 
             <div class="col-4 col-md px-1 roomType">
@@ -61,21 +61,20 @@
         <div class="row m-0">
             <div class="col-12 p-3 votingResults">
                 <div>
-                    <h3 class="m-0 font-weight-bold text-center">
+                    <h3 class="m-0 text-center my-4">
                         Voting results
                     </h3>
                 </div>
 
-                <div class="row">
-                    <div *ngFor="let vote of element.votingResults"
-                    class="col px-1 my-1">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div *ngFor="let vote of element.votingResults" class="col px-1 my-1">
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="commonNumber" [class.active]="vote.active">
                                 {{ vote.commonNumber }}
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-center">
-                            <div class="count text-center mt-2">
+                            <div class="count text-center mt-2 py-2">
                                 {{ vote.count }}
                             </div>
                         </div>
@@ -84,7 +83,7 @@
             </div>
 
             <div class="col-12 my-3">
-                <h3 class="m-0 text-center">
+                <h3 class="m-0 text-center mt-3 mb-2">
                     Results of all members
                 </h3>
                 <p class="text-center">
