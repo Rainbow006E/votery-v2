@@ -97,6 +97,40 @@
             width: 100%;
             box-shadow: none;
             background-color: transparent;
+            // mat cell default width
+            .mat-cell {
+                width: 16%;
+            }
+
+            // type cell
+            .mat-column-type {
+                width: 16%;
+            }
+
+            // acitivity cell
+            .mat-column-activity {
+                width: 12%;
+            }
+
+            // amount and currency cell
+            .mat-column-amountAndCurrency {
+                width: 24%;
+            }
+            
+            // date cell
+            .mat-column-date {
+                width: 16%;
+            }
+
+            // status cell
+            .mat-column-status {
+                width: 16%;
+            }
+
+            // withdraw date cell
+            .mat-column-withdrawDate {
+                width: 16%;
+            }
             thead {
                 background-color: #f2f2f2;
                 tr.mat-header-row {
@@ -124,7 +158,7 @@
                 }
                 tr:not(:last-child) td {
                     background: transparent;
-                    background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 20%, rgba(255, 255, 255, 0) 0%);
                     background-position: bottom;
                     background-size: 11px 1px;
                     background-repeat: repeat-x;

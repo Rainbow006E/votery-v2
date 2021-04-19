@@ -92,22 +92,22 @@
 
             // application cell
             .mat-column-application {
-                width: 14%;
+                width: 10%;
             }
 
             // room type cell
             .mat-column-roomType {
-                width: 14%;
+                width: 10%;
             }
 
             // acitivity cell
             .mat-column-activity {
-                width: 14%;
+                width: 10%;
             }
 
             // amount and currency cell
             .mat-column-amountAndCurrency {
-                width: 14%;
+                width: 20%;
             }
             
             // date cell
@@ -117,7 +117,7 @@
 
             // voting results cell
             .mat-column-votingResults {
-                width: 32%;
+                width: 36%;
             }
 
             thead {
@@ -138,7 +138,6 @@
                 box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%),
                     0px 3px 14px 2px rgb(0 0 0 / 12%);
                 border-radius: 12px;
-                margin-bottom: 40px;
                 tr {
                     td {
                         background: transparent;
@@ -152,6 +151,18 @@
                     background-position: bottom;
                     background-size: 11px 1px;
                     background-repeat: repeat-x;
+                }
+
+                tr:last-child {
+                    td {
+                        padding: 0 0 40px 0;
+                    }
+                    td:first-child {
+                        padding: 0 0 40px 24px;
+                    }
+                    td:last-child {
+                        padding: 0 24px 40px 0;
+                    }
                 }
 
                 .mat-column-groupHeader {
@@ -207,6 +218,9 @@
                         color: #1264AD;
                         cursor: pointer;
                     }
+                }
+                .bgWhite {
+                    background: white !important;
                 }
             }
         }

@@ -39,11 +39,15 @@
                                 min-width: 98px;
                                 width: 98px;
                                 padding: 0;
+                                .mat-ripple-element {
+                                    display: none !important;
+                                }
                             }
                             .mat-tab-label-active {
                                 background: white;
                                 border-top-left-radius: 8px;
                                 border-top-right-radius: 8px;
+                                opacity: 1;
                             }
                         }
                         .mat-ink-bar {
