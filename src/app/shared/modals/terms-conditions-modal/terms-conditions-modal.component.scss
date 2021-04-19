@@ -8,17 +8,20 @@
         padding: 0;
         button.close {
             position: absolute;
-            right: -18px;
-            top: -24px;
+            right: -14px;
+            top: -20px;
             z-index: 3;
             color: white;
             border-radius: 50%;
-            border: 2px solid white;
-            width: 42px;
-            height: 42px;
+            border: 1px solid gray;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
+            span {
+                color: gray;
+            }
         }
     }
     .modal-body {

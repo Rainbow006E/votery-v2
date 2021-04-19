@@ -45,7 +45,7 @@
                 <div class="input-group border"
                   [class.border-danger]="lf.password.invalid && (lf.password.dirty || lf.password.touched)"
                   [class.border-success]="lf.password.valid && (lf.password.dirty || lf.password.touched)" required>
-                  <input class="form-control" [type]="loginEye" formControlName="password">
+                  <input class="form-control" [type]="loginEye" formControlName="password" placeholder="Password">
                   <div class="input-group-addon px-2">
                     <a href="javascript: void(0)" (click)="toggleEye('login')">
                       <i *ngIf="loginEye === 'password'; else text" class="fa fa-eye-slash" aria-hidden="true"></i>
@@ -145,7 +145,7 @@
                 <div class="input-group border"
                   [class.border-danger]="lf.password.invalid && (lf.password.dirty || lf.password.touched)"
                   [class.border-success]="lf.password.valid && (lf.password.dirty || lf.password.touched)" required>
-                  <input class="form-control" [type]="registerEye" formControlName="password">
+                  <input class="form-control" [type]="registerEye" formControlName="password" placeholder="Password">
                   <div class="input-group-addon px-2">
                     <a href="javascript: void(0)" (click)="toggleEye('register')">
                       <i *ngIf="registerEye === 'password'; else text" class="fa fa-eye-slash" aria-hidden="true"></i>

@@ -3,12 +3,24 @@
         background-color: #131313;
         .title {
             color: #48C6C9;
+            font-size: 18px !important;
+            font-weight: 450 !important;
         }
         .active {
             color: #F4F4F4;
         }
+        .white {
+            color: white !important;
+        }
         a:hover, a:focus {
             color: #F4F4F4;
+        }
+    }
+
+    .payments {
+        .copyright {
+            font-size: 13px !important;
+            color: #838383;
         }
     }
 }
