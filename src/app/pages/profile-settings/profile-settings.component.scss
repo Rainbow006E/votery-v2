@@ -22,11 +22,17 @@
     form {
         input {
             border-radius: 6px;
-            height: 42px;
-            font-size: 1em;
+            height: 50px;
+            font-size: 16px !important;
             border: 0;
             box-shadow: 3px 2px 12px 2px #b0b0b0;
             background-color: white;
+            color: black;
+            padding: 0 22px;
+            &::placeholder {
+                font-size: 16px !important;
+                color: gray !important;
+            }
         }
         
         // input number right arrow remove
@@ -42,11 +48,12 @@
 
         select {
             border-radius: 6px;
-            height: 42px;
-            font-size: 1em;
+            height: 50px;
+            font-size: 16px !important;
             border: 0;
             box-shadow: 3px 2px 12px 2px #b0b0b0;
             background-color: white;
+            padding: 0 22px;
             option {
                 font-size: 1.143em;
                 color: black;
@@ -56,7 +63,8 @@
             }
         }
         select.disable-text {
-            color: gainsboro;
+            color: gray;
+            font-size: 16px;
             background-color: white;
         }
 
@@ -76,12 +84,15 @@
 
         input.date {
             width: 10%;
+            min-width: 80px;
         }
         input.month {
             width: 10%;
+            min-width: 80px;
         }
         input.year {
             width: 15%;
+            min-width: 120px;
         }
         a.blueBtn {
             background: linear-gradient( 180deg, #1264AD, #48C6C9);
@@ -103,6 +114,9 @@
                 box-shadow: none;
                 opacity: .8;
             }
+        }
+        .btnGroup {
+            min-width: fit-content;
         }
     }
 }

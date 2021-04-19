@@ -23,6 +23,7 @@
     }
     .modal-body {
         padding: 0;
+        background-color: #131313;
         .login {
             background-color: #f4f4f4;
             border-radius: 12px;
@@ -39,8 +40,10 @@
             a.blueBtn {
                 background: linear-gradient( 180deg, #1264AD, #48C6C9);
                 border-radius: 6px;
-                font-size: 1.143em;
+                font-size: 16px;
                 box-shadow: 4px 4px 12px 4px #00000033;
+                font-weight: 600 !important;
+                height: 49px;
             }
             .bottom-circle {
                 position: absolute;
@@ -61,7 +64,9 @@
             a.registerBtn {
                 background: linear-gradient( 180deg, #E30E00, #FF8A00);
                 border-radius: 6px;
-                font-size: 1.143em;
+                font-size: 16px;
+                font-weight: 600 !important;
+                height: 49px;
             }
             .agree, .twofa {
                 input[type=checkbox] {
@@ -77,6 +82,17 @@
                     cursor: pointer;
                 }
             }
+        }
+
+        .titlePara {
+            z-index: 9;
+            position: relative;
+            font-size: 24px !important;
+            font-weight: 500 !important;
+        }
+
+        p.description {
+            font-size: 15px !important;
         }
     
         form {
@@ -127,10 +143,15 @@
                     }
                 }
             }
+
+            .customCheckBox {
+                height: 25px;
+            }
+
             .social-icon {
                 cursor: pointer;
-                width: 48px;
-                height: 48px;
+                width: 42px;
+                height: 42px;
                 border-radius: 50%;
                 border: 1px solid #a6a6a6;
                 padding: 12px 13px 14px;

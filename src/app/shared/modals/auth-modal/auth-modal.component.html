@@ -13,10 +13,10 @@
         <div class="top-circle ml-3">
           <img src="assets/imgs/modal-top-circle.svg">
         </div>
-        <h3 class="m-0">
+        <h3 class="mb-2 titlePara">
           Login
         </h3>
-        <p>
+        <p class="description">
           Welcome, our beloved user! <br>
           We’re glad to see you back!
         </p>
@@ -69,7 +69,7 @@
 
             <!-- Login Button -->
             <div class="col-12 my-2">
-              <a class="blueBtn btn btn-primary text-uppercase w-100" (click)="login()">
+              <a class="blueBtn btn btn-primary text-uppercase w-100 d-flex align-items-center justify-content-center" (click)="login()">
                 Login
               </a>
             </div>
@@ -89,18 +89,18 @@
                 Or login with:
               </p>
             </div>
-            <div class="col-12">
-              <a href="javascript: void(0)" class="social-icon mx-2">
+            <div class="col-12 d-flex">
+              <div class="social-icon mx-2 d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/icons/facebook.svg">
-              </a>
+              </div>
 
-              <a href="javascript: void(0)" class="social-icon mx-2">
+              <div class="social-icon mx-2 d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/icons/linkedin.svg">
-              </a>
+              </div>
 
-              <a href="javascript: void(0)" class="social-icon mx-2">
+              <div class="social-icon mx-2 d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/icons/google.svg">
-              </a>
+              </div>
             </div>
           </div>
         </form>
@@ -113,10 +113,10 @@
 
       <!-- Register Section -->
       <div class="col-12 col-md-6 p-3 p-md-5 register text-light">
-        <h3 class="m-0">
+        <h3 class="mb-2 titlePara">
           Create account
         </h3>
-        <p>
+        <p class="description">
           In order to participate in VOTERY and win real cash, you have to create an account.
         </p>
 
@@ -169,19 +169,29 @@
 
             <!-- Checkbox terms and conditions, privacy -->
             <div class="col-12 my-2 agree d-flex align-items-center justify-content-start">
-              <input type="checkbox" name="agree" id="agree" class="mr-2" formControlName="agree">
-              <label for="agree" class="m-0">I agree to <a (click)="termsPricacy($event)">Terms of Use</a> and <a (click)="termsPricacy($event)">Privacy Policy</a></label>
+              <label class="customCheckBox d-flex align-items-center">
+                <div>
+                  I agree to <a (click)="termsPricacy($event)">Terms of Use</a> and <a (click)="termsPricacy($event)">Privacy Policy</a>
+                </div>
+                <input type="checkbox" formControlName="agree">
+                <span class="checkmark"></span>
+              </label>
             </div>
 
             <!-- Checkbox Enable Two Factor Authentication -->
             <div class="col-12 my-2 twofa d-flex align-items-center justify-content-start">
-              <input type="checkbox" name="twofa" id="twofa" class="mr-2" formControlName="twofa">
-              <label for="twofa" class="m-0">Enable two factor authentication</label>
+              <label class="customCheckBox d-flex align-items-center">
+                <div>
+                  Enable two factor authentication
+                </div>
+                <input type="checkbox" formControlName="twofa">
+                <span class="checkmark"></span>
+              </label>
             </div>
 
             <!-- Register Button -->
             <div class="col-12 my-2">
-              <a class="registerBtn btn btn-primary text-uppercase w-100" (click)="register()">
+              <a class="registerBtn btn btn-primary text-uppercase w-100 d-flex align-items-center justify-content-center" (click)="register()">
                 Register
               </a>
             </div>
@@ -194,18 +204,18 @@
                 Or login with:
               </p>
             </div>
-            <div class="col-12">
-              <a href="javascript: void(0)" class="social-icon mx-2">
+            <div class="col-12 d-flex">
+              <div class="social-icon mx-2 d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/icons/white-facebook.svg">
-              </a>
+              </div>
 
-              <a href="javascript: void(0)" class="social-icon mx-2">
+              <div class="social-icon mx-2 d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/icons/white-linkedin.svg">
-              </a>
+              </div>
 
-              <a href="javascript: void(0)" class="social-icon mx-2">
+              <div class="social-icon mx-2 d-flex align-items-center justify-content-center">
                 <img src="assets/imgs/icons/white-google.svg">
-              </a>
+              </div>
             </div>
           </div>
         </form>
