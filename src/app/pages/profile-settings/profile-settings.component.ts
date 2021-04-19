@@ -14,22 +14,20 @@ export class ProfileSettingsComponent implements OnInit {
   profileForm: FormGroup = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
-    phone: new FormControl(''),
+    phone: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     passportNumber: new FormControl('', Validators.required),
     country: new FormControl('', Validators.required),
     twofa: new FormControl(true, Validators.required),
     birthDate: new FormGroup({
-      date: new FormControl('', [Validators.max(31), Validators.min(1)]),
-      month: new FormControl(''),
-      year: new FormControl('')
+      date: new FormControl('', [Validators.max(31), Validators.min(1), Validators.required]),
+      month: new FormControl('', [Validators.max(12), Validators.min(1), Validators.required]),
+      year: new FormControl('', Validators.required)
     }),
-    // bankAccount: new FormGroup({
-      bankName: new FormControl(''),
-      IBAN: new FormControl(''),
-      SWIFT: new FormControl(''),
-      ewallet: new FormControl(''),
-    // })
+    bankName: new FormControl(''),
+    IBAN: new FormControl(''),
+    SWIFT: new FormControl(''),
+    ewallet: new FormControl(''),
   });
   formSubmitted: boolean = false;
 

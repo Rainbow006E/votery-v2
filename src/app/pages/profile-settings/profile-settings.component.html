@@ -44,69 +44,81 @@
                             </h5>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="firstName"
-                            [class.border-danger]="lf.firstName.invalid && (lf.firstName.dirty || lf.firstName.touched)"
-                            [class.border-success]="lf.firstName.valid && (lf.firstName.dirty || lf.firstName.touched)" placeholder="First name" required>
-                            <div *ngIf="lf.firstName.invalid && (lf.firstName.dirty || lf.firstName.touched)"
-                                    class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.firstName.errors.required">
-                                    <sup>*</sup>First name is required.
+                            <div class="requiredField">
+                                <input type="text" class="form-control border" formControlName="firstName"
+                                [class.border-danger]="lf.firstName.invalid && (lf.firstName.dirty || lf.firstName.touched)"
+                                [class.border-success]="lf.firstName.valid && (lf.firstName.dirty || lf.firstName.touched)" placeholder="First name" required>
+                                <div *ngIf="lf.firstName.invalid && (lf.firstName.dirty || lf.firstName.touched)"
+                                        class="help-block mt-1 text-danger">
+                                    <div *ngIf="lf.firstName.errors.required">
+                                        <sup>*</sup>First name is required.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="lastName"
-                            [class.border-danger]="lf.lastName.invalid && (lf.lastName.dirty || lf.lastName.touched)"
-                            [class.border-success]="lf.lastName.valid && (lf.lastName.dirty || lf.lastName.touched)" placeholder="Last name" required>
-                            <div *ngIf="lf.lastName.invalid && (lf.lastName.dirty || lf.lastName.touched)"
-                                    class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.lastName.errors.required">
-                                    <sup>*</sup>Last name is required.
+                            <div class="requiredField">
+                                <input type="text" class="form-control border" formControlName="lastName"
+                                [class.border-danger]="lf.lastName.invalid && (lf.lastName.dirty || lf.lastName.touched)"
+                                [class.border-success]="lf.lastName.valid && (lf.lastName.dirty || lf.lastName.touched)" placeholder="Last name" required>
+                                <div *ngIf="lf.lastName.invalid && (lf.lastName.dirty || lf.lastName.touched)"
+                                        class="help-block mt-1 text-danger">
+                                    <div *ngIf="lf.lastName.errors.required">
+                                        <sup>*</sup>Last name is required.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="phone" placeholder="Phone"
-                            [class.border-danger]="lf.phone.invalid && (lf.phone.dirty || lf.phone.touched)"
-                            [class.border-success]="lf.phone.valid && (lf.phone.dirty || lf.phone.touched)" required>
-                            <div *ngIf="lf.phone.invalid && (lf.phone.dirty || lf.phone.touched)"
-                                    class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.phone.errors.required">
-                                    <sup>*</sup>Phone is required.
+                            <div class="requiredField">
+                                <input type="text" class="form-control border" formControlName="phone" placeholder="Phone"
+                                [class.border-danger]="lf.phone.invalid && (lf.phone.dirty || lf.phone.touched)"
+                                [class.border-success]="lf.phone.valid && (lf.phone.dirty || lf.phone.touched)" required>
+                                <div *ngIf="lf.phone.invalid && (lf.phone.dirty || lf.phone.touched)"
+                                        class="help-block mt-1 text-danger">
+                                    <div *ngIf="lf.phone.errors.required">
+                                        <sup>*</sup>Phone is required.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="email" placeholder="E-mail"
-                            [class.border-danger]="lf.email.invalid && (lf.email.dirty || lf.email.touched)"
-                            [class.border-success]="lf.email.valid && (lf.email.dirty || lf.email.touched)" required>
-                            <div *ngIf="lf.email.invalid && (lf.email.dirty || lf.email.touched)"
-                                    class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.email.errors.required">
-                                    <sup>*</sup>Email is required.
+                            <div class="requiredField">
+                                <input type="text" class="form-control border" formControlName="email" placeholder="E-mail"
+                                [class.border-danger]="lf.email.invalid && (lf.email.dirty || lf.email.touched)"
+                                [class.border-success]="lf.email.valid && (lf.email.dirty || lf.email.touched)" required>
+                                <div *ngIf="lf.email.invalid && (lf.email.dirty || lf.email.touched)"
+                                        class="help-block mt-1 text-danger">
+                                    <div *ngIf="lf.email.errors.required">
+                                        <sup>*</sup>Email is required.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="number" class="form-control border" formControlName="passportNumber" placeholder="Passport number"
-                            [class.border-danger]="lf.passportNumber.invalid && (lf.passportNumber.dirty || lf.passportNumber.touched)"
-                            [class.border-success]="lf.passportNumber.valid && (lf.passportNumber.dirty || lf.passportNumber.touched)" required>
-                            <div *ngIf="lf.passportNumber.invalid && (lf.passportNumber.dirty || lf.passportNumber.touched)"
-                                    class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.passportNumber.errors.required">
+                            <div class="requiredField">
+                                <input type="number" class="form-control border" formControlName="passportNumber" placeholder="Passport number"
+                                [class.border-danger]="lf.passportNumber.invalid && (lf.passportNumber.dirty || lf.passportNumber.touched)"
+                                [class.border-success]="lf.passportNumber.valid && (lf.passportNumber.dirty || lf.passportNumber.touched)" required>
+                                <div *ngIf="lf.passportNumber.invalid && (lf.passportNumber.dirty || lf.passportNumber.touched)"
+                                        class="help-block mt-1 text-danger">
+                                    <div *ngIf="lf.passportNumber.errors.required">
+                                        <sup>*</sup>Passport Number is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <div class="requiredField">
+                                <select class="form-control border" formControlName="country" [class.disable-text]="!value('country')" placeholder="Country"
+                                [class.border-danger]="lf.country.invalid && formSubmitted"
+                                [class.border-success]="lf.country.valid && formSubmitted" required>
+                                    <option class="py-5" value="" disabled selected> Country </option>
+                                    <option class="py-5"> United Statues </option>
+                                </select>
+                                <div *ngIf="formSubmitted && lf.country.errors?.required" class="help-block mt-1 text-danger">
                                     <sup>*</sup>Passport Number is required.
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-3">
-                            <select class="form-control border" formControlName="country" [class.disable-text]="!value('country')" placeholder="Country"
-                            [class.border-danger]="lf.country.invalid && formSubmitted"
-                            [class.border-success]="lf.country.valid && formSubmitted" required>
-                                <option class="py-5" value="" disabled selected> Country </option>
-                                <option class="py-5"> United Statues </option>
-                            </select>
-                            <div *ngIf="formSubmitted && lf.country.errors?.required" class="help-block mt-1 text-danger">
-                                <sup>*</sup>Passport Number is required.
                             </div>
                         </div>
                         <div class="col-12">
@@ -125,13 +137,18 @@
                             </h5>
                         </div>
                         <div class="col-12 d-flex">
-                            <input type="number" class="form-control mr-2 date" formControlName="date" placeholder="DD">
-                            <input type="number" class="form-control mr-2 month" formControlName="month" placeholder="MM">
-                            <input type="number" class="form-control mr-2 year" formControlName="year" placeholder="YYYY">
+                            <div class="requiredField date">
+                                <input type="number" class="form-control mr-2" formControlName="date" placeholder="DD" required>
+                            </div>
+                            <div class="requiredField ml-2 month">
+                                <input type="number" class="form-control mr-2" formControlName="month" placeholder="MM" required>
+                            </div>
+                            <div class="requiredField ml-2 year">
+                                <input type="number" class="form-control mr-2" formControlName="year" placeholder="YYYY" required>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- <div class="form-row mt-5" formGroupName="bankAccount"> -->
                     <div class="form-row mt-5">
                         <div class="col-12">
                             <h5 class="font-weight-bold">
@@ -139,50 +156,21 @@
                             </h5>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="bankName" placeholder="Bank name"
-                            [class.border-danger]="lf.bankName.invalid && (lf.bankName.dirty || lf.bankName.touched)"
-                            [class.border-success]="lf.bankName.valid && (lf.bankName.dirty || lf.bankName.touched)" required>
-                            <div *ngIf="lf.bankName.invalid && (lf.bankName.dirty || lf.bankName.touched)"
-                                class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.bankName.errors.required">
-                                    <sup>*</sup>Bank name is required.
-                                </div>
-                            </div>
+                            <input type="text" class="form-control border" formControlName="bankName" placeholder="Bank name">
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="IBAN" placeholder="IBAN"
-                            [class.border-danger]="lf.IBAN.invalid && (lf.IBAN.dirty || lf.IBAN.touched)"
-                            [class.border-success]="lf.IBAN.valid && (lf.IBAN.dirty || lf.IBAN.touched)" required>
-                            <div *ngIf="lf.IBAN.invalid && (lf.IBAN.dirty || lf.IBAN.touched)"
-                                class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.IBAN.errors.required">
-                                    <sup>*</sup>IBAN is required.
-                                </div>
-                            </div>
+                            <input type="text" class="form-control border" formControlName="IBAN" placeholder="IBAN">
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <select class="form-control border" formControlName="SWIFT" [class.disable-text]="!value('SWIFT')" placeholder="SWIFT"
-                            [class.border-danger]="lf.SWIFT.invalid && formSubmitted"
-                            [class.border-success]="lf.SWIFT.valid && formSubmitted" required>
+                            <select class="form-control border" formControlName="SWIFT" [class.disable-text]="!value('SWIFT')" placeholder="SWIFT">
                                 <option class="py-5" value="" disabled selected> SWIFT </option>
                                 <option class="py-5"> Select1 </option>
                                 <option class="py-5"> Select2 </option>
                                 <option class="py-5"> Select3 </option>
                             </select>
-                            <div *ngIf="formSubmitted && lf.SWIFT.errors?.required" class="help-block mt-1 text-danger">
-                                <sup>*</sup>SWIFT is required.
-                            </div>
                         </div>
                         <div class="col-12 col-md-4 mb-3">
-                            <input type="text" class="form-control border" formControlName="ewallet" placeholder="E-wallet"
-                            [class.border-danger]="lf.ewallet.invalid && (lf.ewallet.dirty || lf.ewallet.touched)"
-                            [class.border-success]="lf.ewallet.valid && (lf.ewallet.dirty || lf.ewallet.touched)" required>
-                            <div *ngIf="lf.ewallet.invalid && (lf.ewallet.dirty || lf.ewallet.touched)"
-                                class="help-block mt-1 text-danger">
-                                <div *ngIf="lf.ewallet.errors.required">
-                                    <sup>*</sup>E-wallet is required.
-                                </div>
-                            </div>
+                            <input type="text" class="form-control border" formControlName="ewallet" placeholder="E-wallet">
                         </div>
                     </div>
 

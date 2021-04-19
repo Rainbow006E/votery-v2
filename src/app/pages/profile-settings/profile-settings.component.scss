@@ -46,6 +46,21 @@
             -moz-appearance:textfield;
         }
 
+        .requiredField {
+            position: relative;
+            z-index: 0;
+            &::before {
+                content: " ";
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #F8007A;
+                top: 5px;
+                right: 5px;
+            }
+        }
+
         select {
             border-radius: 6px;
             height: 50px;
@@ -82,15 +97,15 @@
             background-position: 95% 42%;
         }
 
-        input.date {
+        .date {
             width: 10%;
             min-width: 80px;
         }
-        input.month {
+        .month {
             width: 10%;
             min-width: 80px;
         }
-        input.year {
+        .year {
             width: 15%;
             min-width: 120px;
         }

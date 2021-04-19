@@ -1,12 +1,27 @@
 .dropdown-toggle::after {
-    border-top: 0.5em solid;
-    border-right: 0.5em solid transparent;
-    border-bottom: 0;
-    border-left: 0.5em solid transparent;
+    display: none;
 }
 
 .dropdown.avatar .dropdown-toggle::after {
     display: none;
+}
+
+.dropdown {
+    .upIcon {
+        display: none;
+    }
+    .downIcon {
+        display: block;
+    }
+}
+
+.dropdown.show {
+    .upIcon {
+        display: block;
+    }
+    .downIcon {
+        display: none;
+    }
 }
 
 .navbar {
@@ -82,7 +97,7 @@
             }
             .dropdown {
                 .dropdown-menu {
-                    transform: translate3d(0, 29px, 0);
+                    transform: translate3d(0, 9px, 0);
                     &::before {
                         top: -10px;
                         border-bottom: 1em solid;
