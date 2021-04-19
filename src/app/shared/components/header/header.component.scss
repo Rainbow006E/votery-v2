@@ -14,7 +14,7 @@
     padding-bottom: 0;
     .navbar-brand {
         img {
-            height: 35px;
+            height: 20.59px;
         }
     }
     .navbar-toggler {
@@ -34,6 +34,11 @@
             }
             .nav-link {
                 position: relative;
+                h3 {
+                    font-size: 15px !important;
+                    font-weight: 600 !important;
+                    line-height: 19.23px !important;
+                }
                 .subtract {
                     display: none;
                     position: absolute;
@@ -64,6 +69,7 @@
                         background: linear-gradient( 180deg, #1264AD, #48C6C9);
                         border-radius: 12px;
                         font-size: 1.143em;
+                        box-shadow: 4px 4px 12px 4px #00000033;
                     }
                     a.transBtn {
                         background: transparent;
@@ -77,6 +83,10 @@
         }
         li.nav-item.active {
             background: linear-gradient( 180deg, #1264AD, #48C6C9);
+            a,
+            h3 {
+                color: white;
+            }
             .nav-link {
                 .subtract {
                     display: block;
@@ -132,10 +142,12 @@
 
 @media screen and (max-width: 575px) {
     .navbar {
-        .navbar-nav li {
-            padding: 0;
-            a {
-                padding: 6px 0;
+        .navbar-nav {
+            li {
+                padding: 0;
+                a {
+                    padding: 6px 0;
+                }
             }
         }
     }
