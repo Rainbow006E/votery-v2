@@ -41,28 +41,40 @@
                         border-right: 1em solid transparent;
                         border-left: 1em solid transparent;
                     }
-                    a.blueBtn {
-                        background: linear-gradient(180deg, #1264ad, #48c6c9);
-                        border-radius: 6px;
-                        font-size: 1.143em;
-                        box-shadow: 4px 4px 12px 4px #00000033;
-                    }
-                    a.transBtn {
+                    .buttons {
                         background: transparent;
-                        border-radius: 6px;
-                        font-size: 1.143em;
-                        border: 1px solid #a0a0a0;
-                        color: #a0a0a0 !important;
+                        background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+                        background-position: top;
+                        background-size: 11px 1px;
+                        background-repeat: repeat-x;
+                        a.blueBtn {
+                            background: linear-gradient(180deg, #1264ad, #48c6c9);
+                            border-radius: 6px;
+                            font-size: 1.143em;
+                            box-shadow: 4px 4px 12px 4px #00000033;
+                        }
+                        a.transBtn {
+                            background: transparent;
+                            border-radius: 6px;
+                            font-size: 1.143em;
+                            border: 1px solid #a0a0a0;
+                            color: #a0a0a0 !important;
+                        }
                     }
                 }
             }
             a:not(.btn):not(.dropdown-item) {
                 color: black;
             }
+
+            h4 {
+                font-size: 20px !important;
+            }
         }
     }
 
     .history-table {
+        font-size: 16px;
         table.mat-table {
             width: 100%;
             box-shadow: none;
@@ -106,8 +118,10 @@
                 background-color: #f2f2f2;
                 tr.mat-header-row {
                     background-color: transparent;
-                    th {
+                    th.mat-header-cell {
                         border: 0;
+                        font-size: 13px;
+                        font-weight: 400 !important;
                     }
                     th.mat-column-amountAndCurrency {
                         padding: 0px 28px;
@@ -118,6 +132,7 @@
                 box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%),
                     0px 3px 14px 2px rgb(0 0 0 / 12%);
                 border-radius: 12px;
+                margin-bottom: 40px;
                 tr {
                     td {
                         background: transparent;
@@ -127,13 +142,14 @@
                 }
                 tr:not(:last-child) td {
                     background: transparent;
-                    background-image: linear-gradient(to right, #000 10%, rgba(255, 255, 255, 0) 0%);
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 20%, rgba(255, 255, 255, 0) 0%);
                     background-position: bottom;
                     background-size: 11px 1px;
                     background-repeat: repeat-x;
                 }
 
                 .mat-column-groupHeader {
+                    padding: 31px 19px 16px;
                     background-image: none !important;
                 }
                 
@@ -173,6 +189,9 @@
                             height: 20px;
                             text-align: center;
                             font-size: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                         }
                         .commonNumber.active {
                             background: linear-gradient(180deg, #1264ad, #48c6c9);

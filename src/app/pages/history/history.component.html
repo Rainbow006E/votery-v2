@@ -26,13 +26,14 @@
                                 Filter activities
                             </p>
                         </a>
-                        <div ngbDropdownMenu class="dropdown-menu">
-                            <div class="my-3 white-region px-3">
-                                <h5 class="mb-0">
+                        <div ngbDropdownMenu class="dropdown-menu p-0">
+                            <img src="assets/imgs/subtract/dropdown-top-subtract.svg" class="ml-2">
+                            <div class="my-3 white-region px-4 mx-1">
+                                <h4 class="mb-0">
                                     Application history filters
-                                </h5>
+                                </h4>
 
-                                <div class="d-block d-md-flex align-items-center my-4 mb-5">
+                                <div class="d-block d-md-flex align-items-center my-4 mb-5 cryptoSection">
                                     <div class="goldenLine mr-3">
                                         <div class="d-flex align-items-center justify-content-center">
                                             <img src="assets/imgs/logos/golden-line-logo.svg">
@@ -57,14 +58,22 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <a class="blueBtn btn text-uppercase font-weight-bolder d-flex justify-content-center d-md-inline-block my-1 mr-0 mr-md-3">
-                                    Apply filters
-                                </a>
+                            <div class="buttons pt-4">
+                                <div class="px-4 mx-1">
+                                    <a class="blueBtn btn text-uppercase font-weight-bolder d-flex justify-content-center d-md-inline-block my-1 mr-0 mr-md-3">
+                                        Apply filters
+                                    </a>
+    
+                                    <a class="transBtn btn text-uppercase font-weight-bolder d-flex justify-content-center d-md-inline-block my-1 text-dark">
+                                        Clear filters
+                                    </a>
+                                </div>
+                            </div>
 
-                                <a class="transBtn btn text-uppercase font-weight-bolder d-flex justify-content-center d-md-inline-block my-1 text-dark">
-                                    Clear filters
-                                </a>
+                            <div class="text-right">
+                                <img src="assets/imgs/subtract/dropdown-bottom-subtract.svg" class="mr-2">
                             </div>
                         </div>
                     </div>
@@ -143,6 +152,7 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 <tr mat-row *matRowDef="let row; columns: ['groupHeader']; when: isGroup"></tr>
+                <tr mamt-row> &nbsp; </tr>
             </table>
         </div>
     </div>

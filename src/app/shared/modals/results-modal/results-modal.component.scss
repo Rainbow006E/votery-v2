@@ -59,6 +59,9 @@
                 height: 34px;
                 text-align: center;
                 font-size: 1.43em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .commonNumber.active {
                 background: linear-gradient(180deg, #1264ad, #48c6c9);
