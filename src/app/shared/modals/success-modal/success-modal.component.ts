@@ -7,6 +7,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./success-modal.component.scss']
 })
 export class SuccessModalComponent implements OnInit {
+  type: string;
 
   constructor(
     public activeModal: NgbActiveModal,
