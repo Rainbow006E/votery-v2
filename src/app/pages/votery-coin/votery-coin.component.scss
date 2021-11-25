@@ -1,0 +1,335 @@
+:root {
+    width: calc(100%);
+    --width: calc(100%);
+}
+.wrapper {
+    background: #f5f5f5;
+    .coin-header {
+        height: auto;
+        max-height: fit-content;
+        background: transparent;
+        .brand {
+            height: 140px;
+            img {
+                max-width: 140px;
+            }
+        }
+        .headerBtn {
+            margin: 60px 0 42px;
+        }
+        h1 {
+            font-size: 56px !important;
+            line-height: 67.2px !important;
+            font-weight: 450 !IMPORTANT;
+            .highlightText {
+                color: #FD8300;
+                font-weight: 450 !important;
+            }
+        }
+        .lightBold {
+            font-weight: 450;
+        }
+        .headerRight {
+            position: absolute;
+            top: 76px;
+            right: 0;
+            z-index: 3;
+        }
+    }
+
+    .main {
+        background: transparent;
+        .application-top-divider {
+            &::before {
+                background-image: url(/assets/imgs/coin/boundaryBg1.svg);
+                bottom: 0;
+            }
+        }
+        .application {
+            background: white;
+            .topText {
+                z-index: 2;
+                position: relative;
+            }
+            h3 {
+                font-size: 1.715em;
+            }
+            h4 {
+                font-size: 1.263em !important;
+                font-weight: 450 !important;
+                line-height: 21.6px !important;
+            }
+            h5 {
+                font-size: 1.143em !important;
+                font-weight: 400 !important;
+                line-height: 19.2px !important;
+            }
+            img.manyCoin {
+                margin-left: -27px;
+                margin-bottom: -14px;
+            }
+            .liveData {
+                position: absolute;
+                bottom: 12px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 120%;
+                background: #838383;
+                border-radius: 2px;
+                color: white;
+            }
+            .liveDataMobile {
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 120%;
+                background: #838383;
+                border-radius: 2px;
+                color: white;
+            }
+            .voteryCoinImg {
+                position: absolute;
+                bottom: -32px;
+                left: 50%;
+                transform: translateX(-50%);
+                min-width: 100vw;
+                img.coin {
+                    z-index: 9;
+                }
+                img.greenCurve {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 540px;
+                    transform: translateX(-100%);
+                }
+                img.pinkCurve {
+                    position: absolute;
+                    right: 50%;
+                    transform: translateX(100%) rotate(-21deg);
+                    bottom: 17px;
+                    transform-origin: left bottom;
+                }
+            }
+            img.oneCoin {
+                margin-bottom: -14px;
+            }
+            .verticalBorder {
+                border-right: 2px solid #E8E8E8;
+            }
+            .coinAmount {
+                font-weight: 600;
+            }
+            .smallWidth {
+                width: 58%;
+            }
+        }
+
+        .bonus-gray-top-divider {
+            &::before {
+                background-image: url(/assets/imgs/coin/boundaryBg2.svg);
+                bottom: 0;
+            }
+        }
+        .bonus {
+            background-color: #dedede;
+            position: relative;
+            .textSection {
+                z-index: 9;
+                h2 {
+                    font-size: 32px !important;
+                }
+            }
+        }
+        .bonus-gray-bottom-divider {
+            &::before {
+                background-image: url(/assets/imgs/bgs/games-gray-bottom.svg);
+                top: 0;
+            }
+        }
+
+        /** sgewgeege */
+        .choose-application {
+            .white-region {
+                background-image: url(/assets/imgs/bgs/white-region.svg);
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                h4 {
+                    color: #1264AD;
+                }
+            }
+            a.transBtn {
+                border: 1px solid #a0a0a0;
+                color: #a0a0a0 !important;
+            }
+        }
+
+        .faq-top-divider {
+            &::before {
+                background-image: url(/assets/imgs/bgs/faq-bg-top.svg);
+                bottom: 0;
+            }
+        }
+        .faq {
+            background-color: white;
+            a.transBtn {
+                font-size: 15px;
+                font-weight: 600 !important;
+                height: 39px;
+                width: fit-content;
+            }
+        }
+        .faq-bottom-divider {
+            background-color: #f2f2f2;
+            &::before {
+                background-image: url(/assets/imgs/bgs/faq-bg-bottom.svg);
+                top: 0;
+            }
+        }
+
+        .news {
+            background-color: #f2f2f2;
+            .news-row {
+                :first-child img {
+                    border-top-left-radius: 94px;
+                }
+                :last-child img {
+                    border-bottom-right-radius: 94px;
+                }
+            }
+        }
+        .news-bottom-divider {
+            background-color: #f2f2f2;
+            &::before {
+                background-image: url(/assets/imgs/bgs/footer-grey-top.svg);
+                top: 0;
+                height: 100% !important;
+            }
+        }
+    }
+    
+    /** Global styles */
+    a.blueBtn {
+        background: linear-gradient( 180deg, #1264AD, #48C6C9);
+        border-radius: 6px;
+        font-size: 1.143em;
+        box-shadow: 4px 4px 12px 4px #00000033;
+    }
+    a.transBtn {
+        background: transparent;
+        border-radius: 6px;
+        font-size: 1.143em;
+        border: 1px solid #222222;
+    }
+    .divider {
+        height: 150px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+        }
+    }
+    /** 2021.11.25 New Global Styles */
+    .orangeColor {
+        color: #FD8300;
+    }
+    .coinSize1 {
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+    }
+    .coinSize2 {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .wrapper {
+        .main {
+            .application {
+                .smallWidth {
+                    width: 65%;
+                }
+            }
+        }
+        .divider {
+            &::before {
+                background-size: cover;
+                height: calc(100vw * 150 / 1440) !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        .main {
+            .application {
+                .voteryCoinImg {
+                    bottom: -54px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrapper {
+        .coin-header {
+            .brand {
+                height: 30px;
+            }
+            .headerRight {
+                width: 60%;
+                right: -68px;
+                top: 120px;
+                margin-bottom: 24px;
+            }
+        }
+        .main {
+            .application {
+                .smallWidth {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .wrapper {
+        .coin-header {
+            h1 {
+                font-size: 32px !important;
+                line-height: 38.4px !important;
+                font-weight: 400 !important;
+            }
+            h2 {
+                font-size: 17px !important;
+                line-height: 27.2px !important;
+                font-weight: 400 !important;
+            }
+            .headerRight {
+                width: 70%;
+                right: 0;
+                top: 120px;
+            }
+        }
+        .main {
+            .application {
+                .coinAmount {
+                    font-size: 1.315em !important;
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,7 @@ import { NewsComponent } from './news/news.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { StatementComponent } from './statement/statement.component';
 import { TemrsConditionsComponent } from './temrs-conditions/temrs-conditions.component';
+import { VoteryCoinComponent } from './votery-coin/votery-coin.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
       {
         path: "contacts",
         component: ContactsComponent
+      },
+      {
+        path: "votery-coin",
+        component: VoteryCoinComponent
       }
     ]
   },

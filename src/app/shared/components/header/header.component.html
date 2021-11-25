@@ -3,7 +3,7 @@
 
         <div class="navbar-translate">
             <a class="navbar-brand" [routerLink]="['/index']" placement="bottom">
-                <img class="n-logo" src="assets/imgs/logos/logo.svg" alt="">
+                <img class="n-logo" src="assets/imgs/logos/newLogo.svg" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
@@ -120,8 +120,15 @@
                 </li>
                 
                 <li class="nav-item d-flex align-items-center py-1 py-md-3" [class.active]="path === '/news'">
-                    <a class="nav-link" href="/news">
+                    <a class="nav-link" routerLink="/news">
                         <h3 class="m-0 font-weight-bold"> News </h3>
+                        <div class="subtract text-center rounded-circle"></div>
+                    </a>
+                </li>
+
+                <li class="nav-item d-flex align-items-center py-1 py-md-3" [class.active]="path === '/votery-coin'">
+                    <a class="nav-link" routerLink="/votery-coin">
+                        <h3 class="m-0 font-weight-bold"> Votery Coin </h3>
                         <div class="subtract text-center rounded-circle"></div>
                     </a>
                 </li>

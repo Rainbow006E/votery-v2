@@ -11,12 +11,14 @@ import { AuthenticatedLayoutComponent } from './layouts/authenticated-layout/aut
 
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { VoteryCoinComponent } from './pages/votery-coin/votery-coin.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         MainLayoutComponent,
         AuthenticatedLayoutComponent,
+        VoteryCoinComponent,
     ],
     imports: [
         CommonModule,
