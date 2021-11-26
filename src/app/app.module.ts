@@ -12,6 +12,7 @@ import { AuthenticatedLayoutComponent } from './layouts/authenticated-layout/aut
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { VoteryCoinComponent } from './pages/votery-coin/votery-coin.component';
+import { SecondLayoutComponent } from './layouts/second-layout/second-layout.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { VoteryCoinComponent } from './pages/votery-coin/votery-coin.component';
         MainLayoutComponent,
         AuthenticatedLayoutComponent,
         VoteryCoinComponent,
+        SecondLayoutComponent,
     ],
     imports: [
         CommonModule,

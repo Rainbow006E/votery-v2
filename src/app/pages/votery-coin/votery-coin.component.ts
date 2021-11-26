@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./votery-coin.component.scss']
 })
 export class VoteryCoinComponent implements OnInit {
-
+  timerValue: number = 45;
+  
   constructor() { }
 
   ngOnInit(): void {
