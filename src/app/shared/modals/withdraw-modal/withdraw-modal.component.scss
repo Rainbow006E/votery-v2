@@ -37,8 +37,8 @@
                             padding: 0 48px;
                             .mat-tab-label {
                                 min-width: 98px;
-                                width: 98px;
-                                padding: 0;
+                                width: fit-content;
+                                padding: 0 20px;
                                 .mat-ripple-element {
                                     display: none !important;
                                 }
@@ -79,6 +79,46 @@
                             h5 {
                                 font-size: 18px !important;
                                 font-weight: 450 !important;
+                            }
+                            .halfSection {
+                                width: 50%;
+                            }
+                            .requiredField {
+                                position: relative;
+                                z-index: 0;
+                                &::before {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 6px;
+                                    height: 6px;
+                                    border-radius: 50%;
+                                    background: #F8007A;
+                                    top: 5px;
+                                    right: 5px;
+                                }
+                                input {
+                                    border-radius: 6px;
+                                    height: 50px;
+                                    font-size: 16px;
+                                    border: 0;
+                                    box-shadow: 3px 2px 12px 2px #b0b0b0;
+                                    background-color: white;
+                                    &::placeholder {
+                                        font-size: 16px;
+                                        color: rgba($color: #000000, $alpha: .5);
+                                    }
+                                }
+                            }
+                            img.qrCode {
+                                width: 50px;
+                                height: 50px;
+                                border: 1px solid #E8E8E8;
+                                box-sizing: border-box;
+                                border-radius: 4px;
+                                padding: 4px;
+                            }
+                            .noteField {
+                                width: calc(100% - 58px);
                             }
                         }
                     }
@@ -126,9 +166,25 @@
                         .mat-tab-list {
                             .mat-tab-labels {
                                 padding: 0 16px;
-                                .mat-tab-label {
-                                    min-width: 70px;
-                                    width: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal-container {
+        .modal-body {
+            .mat-tab-group {
+                .mat-tab-body-wrapper {
+                    .mat-tab-body {
+                        .mat-tab-body-content {
+                            .deposit-body {
+                                .halfSection {
+                                    width: 100%;
                                 }
                             }
                         }

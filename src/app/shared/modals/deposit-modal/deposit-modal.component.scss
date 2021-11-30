@@ -91,6 +91,12 @@
                                 width: 17px;
                                 height: 17px;
                             }
+                            img.qrCode {
+                                border: 1px solid #E8E8E8;
+                                box-sizing: border-box;
+                                border-radius: 4px;
+                                padding: 6px;
+                            }
                         }
 
                         .deposit-body.exchangeTab {
