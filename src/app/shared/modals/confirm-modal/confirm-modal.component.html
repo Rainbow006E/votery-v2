@@ -14,7 +14,7 @@
         </h3>
         <div class="shadawBody">
             <div class="container px-3 pl-md-5 pr-md-4 pt-5 pb-4">
-                <div class="row" *ngIf="type === 'exchange'; else withdraw">
+                <div class="row" *ngIf="type === 'exchange'; else withdrawBlock">
                     <div class="col-6 col-sm-4">
                         <h5 class="d-flex align-items-center m-0">
                             <span class="lightBold"> -1.000 </span>
@@ -29,7 +29,9 @@
                             <span> VOC </span>
                         </h5>
                     </div>
-                    <ng-template #withdraw>
+                </div>
+                <ng-template #withdrawBlock>
+                    <div class="row">
                         <div class="col-6 col-sm-4">
                             <h5 class="d-flex align-items-center m-0">
                                 <span class="lightBold"> -1.000 </span>
@@ -37,8 +39,8 @@
                                 <span> VOC </span>
                             </h5>
                         </div>
-                    </ng-template>
-                </div>
+                    </div>
+                </ng-template>
             </div>
             <div class="divider"></div>
             <div class="container px-3 pl-md-5 pr-md-4 py-4">

@@ -31,9 +31,9 @@ export class DepositModalComponent implements OnInit {
 
   accept() {
     this.closeModal();
-    const progressInModalRef = this.ngbModal.open(ConfirmModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-confirm' });
-    progressInModalRef.componentInstance.type = "exchange";
-    progressInModalRef.result.then((result) => {
+    const confirmModalRef = this.ngbModal.open(ConfirmModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-confirm' });
+    confirmModalRef.componentInstance.type = "exchange";
+    confirmModalRef.result.then((result) => {
       console.log(result);
     }).catch((error) => {
       console.log(error);

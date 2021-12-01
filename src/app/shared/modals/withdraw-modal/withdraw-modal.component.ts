@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 import { SuccessModalComponent } from '../success-modal/success-modal.component';
 
 @Component({
@@ -40,9 +41,9 @@ export class WithdrawModalComponent implements OnInit {
 
   withdraw() {
     this.closeModal();
-    const progressInModalRef = this.ngbModal.open(SuccessModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-normal' });
-    progressInModalRef.componentInstance.type = "withdraw";
-    progressInModalRef.result.then((result) => {
+    const confirmModalRef = this.ngbModal.open(ConfirmModalComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-confirm' });
+    confirmModalRef.componentInstance.type = "withdraw";
+    confirmModalRef.result.then((result) => {
       console.log(result);
     }).catch((error) => {
       console.log(error);

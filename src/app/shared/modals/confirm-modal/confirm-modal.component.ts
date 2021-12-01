@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { VerificationCodeComponent } from '../verification-code/verification-code.component';
 
 @Component({
   selector: 'app-confirm-modal',
@@ -25,7 +26,16 @@ export class ConfirmModalComponent implements OnInit {
     this.depositTabIndex = index;
   }
 
-  onPercentChange(percent: number) {
-    console.log('here');
+  confirm() {
+    this.closeModal();
+    if (this.type === "withdraw") {
+      const verificationCodeModalRef = this.ngbModal.open(VerificationCodeComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-medium verificationCode' });
+      verificationCodeModalRef.componentInstance.type = "exchange";
+      verificationCodeModalRef.result.then((result) => {
+        console.log(result);
+      }).catch((error) => {
+        console.log(error);
+      });
+    }
   }
 }

@@ -31,6 +31,9 @@ import { SuccessModalComponent } from './modals/success-modal/success-modal.comp
 import { ProgressInModalComponent } from './modals/progress-in-modal/progress-in-modal.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
+import { VerificationCodeComponent } from './modals/verification-code/verification-code.component';
+
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   exports: [
@@ -69,7 +72,8 @@ export class MaterialModule { }
     WithdrawModalComponent,
     SuccessModalComponent,
     ProgressInModalComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    VerificationCodeComponent
   ],
   imports: [
     CommonModule,
@@ -77,7 +81,8 @@ export class MaterialModule { }
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    NgCircleProgressModule.forRoot()
   ],
   exports: [
     // Header and footers
