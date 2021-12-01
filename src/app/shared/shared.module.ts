@@ -30,6 +30,7 @@ import { WithdrawModalComponent } from './modals/withdraw-modal/withdraw-modal.c
 import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
 import { ProgressInModalComponent } from './modals/progress-in-modal/progress-in-modal.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
 
 @NgModule({
   exports: [
@@ -67,7 +68,8 @@ export class MaterialModule { }
     DepositModalComponent,
     WithdrawModalComponent,
     SuccessModalComponent,
-    ProgressInModalComponent
+    ProgressInModalComponent,
+    ConfirmModalComponent
   ],
   imports: [
     CommonModule,

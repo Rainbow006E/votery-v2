@@ -1,0 +1,107 @@
+.modal-container {
+    background: #f4f4f4;
+    border-radius: 12px;
+    position: relative;
+    .modal-header {
+        height: 0;
+        padding: 0;
+        button.close {
+            position: absolute;
+            right: -14px;
+            top: -20px;
+            z-index: 3;
+            color: white;
+            border-radius: 50%;
+            border: 1px solid gray;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                color: gray;
+            }
+        }
+    }
+    .modal-body {
+        h3 {
+            font-size: 24px !important;
+            font-weight: 450 !important;
+        }
+        .shadawBody {
+            background: #FFFFFF;
+            box-shadow: 0px 12px 55px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+            .divider {
+                opacity: 0.1;
+                border-top: 2px solid #000000;
+            }
+        }
+        .bottomSection {
+            .address {
+                font-size: 18px !important;
+                font-weight: 450 !important;
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+        a.blueBtn {
+            background: linear-gradient( 180deg, #1264AD, #48C6C9);
+            border-radius: 6px;
+            font-size: 1.143em;
+            box-shadow: 4px 4px 12px 4px #00000033;
+        }
+        .lightBold {
+            font-weight: 450 !important;
+        }
+        .cButton {
+            cursor: pointer;
+        }
+        .grayColor {
+            color: #838383;
+            a {
+                color: #1264ad;
+            }
+        }
+    }
+    .modal-footer {
+        .bottom-circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            img {
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .modal-container {
+        width: calc(100vw - 18px);
+        .modal-header {
+            button.close {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                font-size: 32px;
+                top: 24px;
+                right: 24px;
+                color: black;
+                border: 2px solid black;
+            }
+        }
+        .modal-body {
+            
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .modal-container {
+        .modal-body {
+            
+        }
+    }
+}
