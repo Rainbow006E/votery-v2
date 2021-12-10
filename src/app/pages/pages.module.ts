@@ -14,6 +14,7 @@ import { StatementComponent } from './statement/statement.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MaterialModule } from 'app/shared/shared.module';
+import { ExchangeComponent } from './exchange/exchange.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MaterialModule } from 'app/shared/shared.module';
     ContactsComponent,
     ProfileSettingsComponent,
     HistoryComponent,
-    StatementComponent
+    StatementComponent,
+    ExchangeComponent
   ],
   imports: [
     CommonModule,

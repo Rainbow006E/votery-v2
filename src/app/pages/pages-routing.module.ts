@@ -4,6 +4,7 @@ import { AuthenticatedLayoutComponent } from 'app/layouts/authenticated-layout/a
 import { MainLayoutComponent } from 'app/layouts/main-layout/main-layout.component';
 import { SecondLayoutComponent } from 'app/layouts/second-layout/second-layout.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ExchangeComponent } from './exchange/exchange.component';
 import { HistoryComponent } from './history/history.component';
 import { IndexComponent } from './index/index.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
@@ -67,6 +68,10 @@ const routes: Routes = [
       {
         path: "votery-coin",
         component: VoteryCoinComponent
+      },
+      {
+        path: "exchange",
+        component: ExchangeComponent
       }
     ]
   }
