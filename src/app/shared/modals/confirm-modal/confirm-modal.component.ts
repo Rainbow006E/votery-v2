@@ -22,10 +22,6 @@ export class ConfirmModalComponent implements OnInit {
     this.activeModal.close();
   }
 
-  selectChange(index: any) {
-    this.depositTabIndex = index;
-  }
-
   confirm() {
     this.closeModal();
     if (this.type === "withdraw") {

@@ -34,6 +34,10 @@ import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.comp
 import { VerificationCodeComponent } from './modals/verification-code/verification-code.component';
 
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { BuyAddListingComponent } from './modals/buy-add-listing/buy-add-listing.component';
+import { SellAddListingComponent } from './modals/sell-add-listing/sell-add-listing.component';
+import { BuyConfirmComponent } from './modals/buy-confirm/buy-confirm.component';
+import { SellConfirmComponent } from './modals/sell-confirm/sell-confirm.component';
 
 @NgModule({
   exports: [
@@ -73,7 +77,11 @@ export class MaterialModule { }
     SuccessModalComponent,
     ProgressInModalComponent,
     ConfirmModalComponent,
-    VerificationCodeComponent
+    VerificationCodeComponent,
+    BuyAddListingComponent,
+    SellAddListingComponent,
+    BuyConfirmComponent,
+    SellConfirmComponent
   ],
   imports: [
     CommonModule,
