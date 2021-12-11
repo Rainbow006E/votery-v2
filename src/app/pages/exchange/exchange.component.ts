@@ -162,7 +162,7 @@ export class ExchangeComponent implements OnInit {
     });
   }
 
-  buy() {
+  buyConfirm() {
     const buyConfirmModalRef = this.ngbModal.open(BuyConfirmComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-medium buyConfirm' });
     buyConfirmModalRef.result.then((result) => {
       console.log(result);
@@ -171,7 +171,7 @@ export class ExchangeComponent implements OnInit {
     });
   }
 
-  sell() {
+  sellConfirm() {
     const sellConfirmModalRef = this.ngbModal.open(SellConfirmComponent, { backdrop: 'static', centered: true, size: 'lg', windowClass: 'modal-custom-medium sellConfirm' });
     sellConfirmModalRef.result.then((result) => {
       console.log(result);

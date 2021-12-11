@@ -1,1 +1,86 @@
-<p>sell-confirm works!</p>
+<div class="modal-container my-4 my-md-5">
+    <div class="modal-header">
+        <div class="top-circle ml-3">
+            <img src="assets/imgs/modal-top-circle.svg">
+        </div>
+        <h4 class="modal-title" id="modal-title"> </h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.close(false)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body p-0 py-3 py-md-5">
+        <h3 class="px-3 px-md-5 mb-3 d-flex align-items-center">
+            Sell
+        </h3>
+        <div class="shadawBody">
+            <div class="container px-3 pl-md-5 pr-md-4 pt-5 pb-4">
+                <div class="row">
+                    <div class="col-6 col-sm-4">
+                        <h5 class="d-flex align-items-center m-0">
+                            <span class="lightBold"> -1.000 </span>
+                            <img src="assets/imgs/footer-icons/tcoin.svg" class="mx-1">
+                            <span> USDT </span>
+                        </h5>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <h5 class="d-flex align-items-center m-0">
+                            <span class="lightBold"> +5.000 </span>
+                            <img src="assets/imgs/footer-icons/vcoin.svg" class="mx-1">
+                            <span> VOC </span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="container px-3 pl-md-5 pr-md-4 py-4">
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <span> Reference number </span>
+                        <h5 class="d-flex align-items-center m-0 lightBold">
+                            LOYEX0067902
+                        </h5>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <span> Payment fee </span>
+                        <h5 class="d-flex align-items-center m-0 lightBold">
+                            0.400 USDT
+                        </h5>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <span> Amount </span>
+                        <h5 class="d-flex align-items-center m-0 lightBold">
+                            1.000 USDT
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="container px-3 pl-md-5 pr-md-4 pt-4 grayColor">
+                <div class="row">
+                    <div class="col-12 col-sm-8">
+                        <span> The amount is an indicative quotation and it may change after the order executes. </span>
+                    </div>
+                    <div class="col-12 col-sm-8 mt-2">
+                        <span> Attention! Please be acquainted with our <a href="javascript: void();"> Fee Policy </a> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-3 pl-md-5 pr-md-4">
+                <div class="text-right">
+                    <img src="assets/imgs/subtract/overlapped-subtract.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="px-3 px-md-5 pt-4 bottomSection">
+            <a class="blueBtn btn text-uppercase font-weight-bolder my-1 mr-0 mr-md-3" (click)="sellConfirm()">
+                Confirm
+            </a>
+        </div>
+    </div>
+    <div class="modal-footer p-0">
+        <div class="bottom-circle m-0 w-100">
+            <img src="assets/imgs/modal-bottom-circle.svg" class="mr-4">
+        </div>
+    </div>
+</div>
